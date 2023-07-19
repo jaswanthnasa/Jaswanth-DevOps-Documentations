@@ -1,0 +1,2 @@
+Amazon2.App=org.springframework.stereotype.Component
+Amazon2.GreetingController=org.springframework.stereotype.Component
