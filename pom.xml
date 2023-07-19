@@ -5,7 +5,7 @@
     <groupId>Amazon</groupId>
     <artifactId>Avatar2</artifactId>
     <version>v2023</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>SmartTvs</name>
     <description>Blank project for GraalVM + Spring MVC</description>
