@@ -6,6 +6,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>  
   <groupId>com.javatpoint.application1</groupId>  
   <artifactId>adipurush-1</artifactId>  
-  <version>v2023</version>  
+  <version>v2023</version> 
+  <package>war</package>
   
 </project> 
