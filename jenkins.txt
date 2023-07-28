@@ -1,0 +1,168 @@
+1) What is jenkins
+    it is an automation tool / CICD tool
+    Jenkins is a pulg-on based tool	
+
+     ci--continuous integration
+     cd -- continuous delivey/ continuous deployment
+
+
+2) Why Jenkins
+   In order to avoid the deplays in building or deployong the code / to automate the flow
+
+
+  Sun Microsystems=============================================> Acquired by Oracle
+   Kawaguchi---created a tool ---Hudson
+
+                              ------Jenkins [since 2013 ]
+
+3) how to install jenkins
+
+java is mandatory to install/work on jenkins
+
+step 1) Install Java
+  	 sudo apt-get update  ========> updating the server for latest updates/patches.....
+         sudo apt install default-jdk ===============> to install ddefault java version
+	 java --version
+
+	        update-alternatives --config java  ==============>to chose current choice of java versionif [we have multiple java versions ]
+
+step 2) Install mvn
+
+	sudo apt install maven  =================>to install maven
+	mvn --version 
+
+
+step 3) Install Jenkins  
+
+      refer below url for commands
+      https://stackoverflow.com/questions/70541720/jenkins-has-no-installation-candidate-error-while-trying-to-install-jenkins-on
+
+		
+		1) curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+		2) echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+
+		3) sudo apt-get update
+ 		   sudo apt-get install jenkins
+
+
+		To check jenkins status  =======> sudo service jenkins status
+		                                  sudo service jenkins start
+						  sudo service jenkins stop
+						  sudo service jenkins restart								
+
+=============================================================
+
+Automatic installations ---have to given in user data [under Advanced settings while launching instance ]
+
+#!/bin/bash
+sudo apt-get update
+sudo apt install default-jdk -y
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins -y
+
+
+==================================================================================
+How to login to Jenkins via Browser
+
+1) Jenkins default port number ====> 8080
+2) how to access jenkins from browser=========> take the public IP of the instance and use with port :8080
+      						65.0.139.63:8080
+3) sudo cat /var/lib/jenkins/secrets/initialAdminPassword =========> copy the password and paste it in browser
+4) Then intall suggested plug-ins [option-1] ====> which installs most commnly used plug-ins
+5) Artifact will store in ====> /var/lib/jenkins/workspace/
+
+
+
+=========
+<project xmlns="http://maven.apache.org/POM/4.0.0"   
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+http://maven.apache.org/xsd/maven-4.0.0.xsd">  
+  
+  <modelVersion>4.0.0</modelVersion>  
+  <groupId>com.javatpoint.application1</groupId>  
+  <artifactId>Artifact-dummyname</artifactId>  
+  <version>v1</version>  
+  
+</project>  
+=====
+Artifact-dummyname-v1.jar
+
+
+
+===============================================
+Jenkins follows master-slave architecture
+
+Build executor status ======master[Built-In Node]===2
+			    slave ===1	
+
+
+
+Triggers:
+
+1)Trigger builds remotely ----- have to give url with token
+   [http://13.234.116.63:8080/view/all/job/first/build/prabas]
+
+
+2)Build periodically------------> * * * * * [every minute]
+https://crontab.guru/
+
+
+
+3) GitHub hook trigger for GITScm polling  [webhooks]
+	- goto your repo 
+	- goto settings
+	- goto webhooks [on the left]
+	- click on add webhooks
+    **	- Payload URL--------jenkins-url/github-webhook/      [http://3.110.177.145:8080/github-webhook/]
+	- content type -- application/json
+	- Which events would you like to trigger this webhook?------ send me everything
+	- Finally add webhook
+	
+			Now wen even we made any changes in github--------->build will be trigger immediately
+
+4) Build after other projects are built
+
+
+
+5) poll scm 
+
+ Poll SCM will check for changes before triggering any build, if there are changes to the previous version there only build will be triggered.
+
+
+================================
+
+Master-slave setup
+===================
+
+commands to execute in slave- instaces
+
+cd /opt
+sudo mkdir slave1-job
+sudo chmod 777 -R slave-jobs/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.*pipeline.*
