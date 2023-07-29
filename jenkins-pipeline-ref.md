@@ -37,7 +37,7 @@ pipeline {
 ### help section
 ```
 mvn 3 ====> name of the maven added under managejenkins-->tools
-sshagent=====> we have to install " SSH Agent Plugin"
+sshagent=====> we have to install " SSH Agent Plugin" & also need to configure tomcat server creds [username,key] is syntax-gnerator
 
 chown -R ubuntu:ubuntu /opt  ============> changing ownership permissions on opt dorectpry
 
