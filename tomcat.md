@@ -26,17 +26,21 @@ wget======> to download files from web
   cd /opt/tomcat9/bin
 ```
 
-8) we need to start the tomcat server. so we need to execute the script in bin path
+8) we need to start the tomcat server. so we need to execute the script in bin path <br/>
+```
    sh startup.sh
+```
 
-9) Tomcat has started in step-7, now we can able access the tomcat from web
+9) Tomcat has started in step-7, now we can able access the tomcat from web <br/>
    publicip:8080
 
 10) Goto "Manager App" in tomcat webpage
    403 Access Denied
     
-  	how to reslove this?=====> goto the path 
+  	how to reslove this?=====> goto the path </br>
+   ```
 					/opt/tomcat9/webapps/manager/META-INF
+   ```
 			           update the context.xml =====>allow=".*"
 
 11) Update the tomcat-users.xml file in /opt/tomcat9/conf
