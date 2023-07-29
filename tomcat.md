@@ -82,9 +82,6 @@ change connector port from 8080 to 8081 <br/>
 restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh] <br/> 
 
 
-==========================================================================================================
-=======================================================================================================
-
-Tomcat_Jenkins integration
+# Tomcat_Jenkins integration
 
 1) Plug-in used to integrate Tomcat with Jenkins=============>"Deploy to container"
