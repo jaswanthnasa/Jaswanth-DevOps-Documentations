@@ -79,9 +79,9 @@ wget https://updates.jenkins.io/download/war/2.416/jenkins.war
 ```
 cd /opt/tomcat9/conf
 ```    
-	      cat server.xml | grep 8080 <br/>
-	change connector port from 8080 to 8081 <br/>
-	restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh] <br/>
+cat server.xml | grep 8080 <br/>
+change connector port from 8080 to 8081 <br/>
+restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh] <br/>
 ==========================================================================================================
 =======================================================================================================
 
