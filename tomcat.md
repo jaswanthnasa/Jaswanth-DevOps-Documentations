@@ -1,35 +1,45 @@
 1)Launch instance with java pre-intalled
 
 2)To donwload tomcat to our ubuntu machine/inatance
+```
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
-    [wget ----to download files from web]
+```
+wget======> to download files from web
 
-3) In prder to avoid permisson denied errors 
-    sudo su=======> to become root/super user
+3) In prder to avoid permisson denied errors <br/>
+ sudo su---- to become root/super user
+```
+ sudo su
+```
 
-4) Unzip/ untar the file use below command
+5) Unzip/ untar the file use below command <br/>
+```
     tar -xvzf apache-tomcat-9.0.78.tar.gz
-
-5) Rename folder to tomcat9
+```
+5) Rename folder to tomcat9 <br/>
+```
    mv apache-tomcat-9.0.78 tomcat9
+```
 
-6) goto the below path
-   /opt/tomcat9/bin
+6) goto the below path <br/>
+```
+  cd /opt/tomcat9/bin
+```
 
-7) we need to start the tomcat server. so we need to execute the script in bin path
+8) we need to start the tomcat server. so we need to execute the script in bin path
    sh startup.sh
 
-8) Tomcat has started in step-7, now we can able access the tomcat from web
+9) Tomcat has started in step-7, now we can able access the tomcat from web
    publicip:8080
 
-9) Goto "Manager App" in tomcat webpage
+10) Goto "Manager App" in tomcat webpage
    403 Access Denied
     
   	how to reslove this?=====> goto the path 
 					/opt/tomcat9/webapps/manager/META-INF
 			           update the context.xml =====>allow=".*"
 
-10) Update the tomcat-users.xml file in /opt/tomcat9/conf
+11) Update the tomcat-users.xml file in /opt/tomcat9/conf
 
 <tomcat-users>
 <role rolename="manager-gui"/>
