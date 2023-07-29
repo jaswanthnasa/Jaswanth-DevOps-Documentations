@@ -47,11 +47,13 @@ cd /opt/tomcat9/webapps/manager/META-INF
   update the context.xml =====>allow=".*"
 
 10) Update the tomcat-users.xml file in /opt/tomcat9/conf
+```
 
 <tomcat-users>
 <role rolename="manager-gui"/>
 <user username="admin" password="Admin" roles="manager-gui, manager-script, manager-admin, manager-status"/>
 </tomcat-users>
+```
 
 11)login using below creds
 	user name:admin
@@ -62,18 +64,24 @@ cd /opt/tomcat9/webapps/manager/META-INF
 13) deploy a sample .war file  [What ever the .war files present in webapps folder tomcat will deploy those]
 
 try below sample war files and try to access from tomcat
-
+```
 wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+```
+```
 
 wget https://updates.jenkins.io/download/war/2.416/jenkins.war
+```
 
 # Advanced steps
 
-1) to change the tomcat default port number from 8080 to otherp port [ex: 8081]
-   	goto /opt/tomcat9/conf
-	      cat server.xml | grep 8080
-	change connector port from 8080 to 8081
-	restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh]
+1) to change the tomcat default port number from 8080 to otherp port [ex: 8081] <br/>
+   	goto /opt/tomcat9/conf <br/>
+```
+cd /opt/tomcat9/conf
+```    
+	      cat server.xml | grep 8080 <br/>
+	change connector port from 8080 to 8081 <br/>
+	restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh] <br/>
 ==========================================================================================================
 =======================================================================================================
 
