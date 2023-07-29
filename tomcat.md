@@ -71,7 +71,7 @@ wget https://updates.jenkins.io/download/war/2.416/jenkins.war
 
 # Advanced steps
 
-1. to change the tomcat default port number from 8080 to otherp port [ex: 8081] <br/>
+1. to change the tomcat default port number from 8080 to other port [ex: 8081] <br/>
    	goto /opt/tomcat9/conf <br/>
     
 ```
