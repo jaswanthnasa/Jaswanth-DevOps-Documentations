@@ -2,11 +2,12 @@
 
 1)Launch instance with java pre-intalled
 
-2)To donwload tomcat to our ubuntu machine/inatance
+2)To donwload tomcat to our ubuntu machine/inatance 
 ```
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
 ```
 wget======> to download files from web
+
 
 3) In prder to avoid permisson denied errors <br/>
  sudo su---- to become root/super user
