@@ -12,26 +12,26 @@ wget======> to download files from web
 3) In prder to avoid permisson denied errors <br/>
  sudo su---- to become root/super user
 ```
- sudo su
+sudo su
 ```
 
 4) Unzip/ untar the file use below command <br/>
 ```
-    tar -xvzf apache-tomcat-9.0.78.tar.gz
+tar -xvzf apache-tomcat-9.0.78.tar.gz
 ```
 5) Rename folder to tomcat9 <br/>
 ```
-   mv apache-tomcat-9.0.78 tomcat9
+mv apache-tomcat-9.0.78 tomcat9
 ```
 
 6) goto the below path <br/>
 ```
-  cd /opt/tomcat9/bin
+cd /opt/tomcat9/bin
 ```
 
 7) we need to start the tomcat server. so we need to execute the script in bin path <br/>
 ```
-   sh startup.sh
+sh startup.sh
 ```
 
 8) Tomcat has started in step-7, now we can able access the tomcat from web <br/>
@@ -42,7 +42,7 @@ wget======> to download files from web
     
   	how to reslove this?=====> goto the path </br>
    ```
-					/opt/tomcat9/webapps/manager/META-INF
+cd /opt/tomcat9/webapps/manager/META-INF
    ```
   update the context.xml =====>allow=".*"
 
