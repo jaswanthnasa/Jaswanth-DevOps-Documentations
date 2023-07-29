@@ -12,7 +12,7 @@ wget======> to download files from web
  sudo su
 ```
 
-5) Unzip/ untar the file use below command <br/>
+4) Unzip/ untar the file use below command <br/>
 ```
     tar -xvzf apache-tomcat-9.0.78.tar.gz
 ```
@@ -41,7 +41,7 @@ wget======> to download files from web
    ```
 					/opt/tomcat9/webapps/manager/META-INF
    ```
-			           update the context.xml =====>allow=".*"
+  update the context.xml =====>allow=".*"
 
 11) Update the tomcat-users.xml file in /opt/tomcat9/conf
 
