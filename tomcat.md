@@ -41,9 +41,9 @@ sh startup.sh
    403 Access Denied
     
   	how to reslove this?=====> goto the path </br>
-   ```
+```
 cd /opt/tomcat9/webapps/manager/META-INF
-   ```
+```
   update the context.xml =====>allow=".*"
 
 10) Update the tomcat-users.xml file in /opt/tomcat9/conf
