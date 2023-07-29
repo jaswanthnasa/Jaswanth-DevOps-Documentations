@@ -46,7 +46,6 @@ cd /opt/tomcat9/webapps/manager/META-INF
 
 10) Update the tomcat-users.xml file in /opt/tomcat9/conf
 ```
-
 <tomcat-users>
 <role rolename="manager-gui"/>
 <user username="admin" password="Admin" roles="manager-gui, manager-script, manager-admin, manager-status"/>
