@@ -84,4 +84,5 @@ restart tomcat [/opt/tomcat9/bin--------> shutdonw.sh then startup.sh] <br/>
 
 # Tomcat_Jenkins integration
 
-1) Plug-in used to integrate Tomcat with Jenkins=============>"Deploy to container"
+1) Plug-in used to integrate Tomcat with Jenkins=============>"Deploy to container"  [incase of freestyle project]
+2) Plug-in used to integrate Tomcat with Jenkins=============>"ssh agent"  [incase of pipline project]
