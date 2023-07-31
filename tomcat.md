@@ -52,8 +52,8 @@ cd /opt/tomcat9/webapps/manager/META-INF
 </tomcat-users>
 ```
 
-11) login using below creds
-	user name:admin
+11) login using below creds <br/>
+	user name:admin <br/>
 	password:Admin
 
 12) cd /opt/tomcat9/webapps
