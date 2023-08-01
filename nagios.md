@@ -30,6 +30,8 @@ sudo make install-config
 sudo make install-commandmode
 sudo make install-webconf
 ```
+
+> Need to provide password for nagiosadmin user
 ```
 sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 ```
@@ -52,7 +54,7 @@ sudo make install
 sudo /usr/local/nagios/bin/nagios -v
 ```
 
-cd /usr/local/nagios/etc/nagios.cfg
+
 
 ```
 sudo systemctl enable nagios
@@ -60,7 +62,9 @@ sudo systemctl start nagios
 ```
 
 
-http://public-ip/nagios
+http://public-ip/nagios <br>
+user-name: nagiosadmin <br>
+password: given password
 
 
 
