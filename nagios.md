@@ -12,14 +12,13 @@ sudo usermod -a -G nagcmd nagios
 sudo usermod -a -G nagcmd www-data
 ```
 
-
 cd /tmp
 ```
 wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz
 tar -zxvf /tmp/nagios-4.4.5.tar.gz
 ```
 
-cd nagios-4.4.5/
+ cd nagios-4.4.5/
 ```
 sudo ./configure --with-nagios-group=nagios --with-command-group=nagcmd --with-httpd_conf=/etc/apache2/sites-enabled/
 ```
