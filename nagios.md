@@ -63,8 +63,9 @@ sudo systemctl start nagios
 
 
 
-**in browser use  below <br> 
-public-ip/nagios <br>
+in browser use  below <br>
+
+**public-ip/nagios <br>
 user-name: nagiosadmin <br>
 password: given password**
 
