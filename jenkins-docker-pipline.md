@@ -88,3 +88,72 @@ pipeline {
 
 Reference: [jenkins-pipeline](https://www.youtube.com/watch?v=WvcHQtyPcTs&list=PL0mwG7J1IRFBDNX1FzLffWsaCemXo13-w&index=2&t=2895s) <br>
 OWASP scan----> Vulneranility scan on source code
+
+
+## Practiced once
+```
+pipeline {
+    agent any
+    tools{
+        maven  'mvn3'
+    }
+    
+    environment{
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+    
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/jaiswaladi246/Shopping-Cart.git'
+            }
+        }
+        
+        stage('COMPILE') {
+            steps {
+                sh "mvn clean compile -DskipTests=true"
+            }
+        }
+        
+       
+        
+      
+         stage('Build') {
+            steps {
+                sh "mvn clean package -DskipTests=true"
+            }
+        }
+        
+        stage('Docker Build & Push') {
+            steps {
+                script{
+
+                        withDockerRegistry(credentialsId: 'dokcer-hub') {
+    
+                        sh "docker build -t shopping-cart -f docker/Dockerfile ."
+                        sh "docker tag  shopping-cart jas09563/shopping-cart:latest"
+                        sh "docker push jas09563/shopping-cart:latest"
+                    }
+                }
+            }
+        }
+        
+        
+         stage('Docker Run') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: 'dokcer-hub') {
+                        
+                        sh "docker run -d --name shop-shop -p 8070:8070 jas09563/shopping-cart:latest"
+                        
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+```
+
+
