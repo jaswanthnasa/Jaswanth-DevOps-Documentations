@@ -88,7 +88,8 @@ pipeline {
 # Reference Video
 
 Reference: [jenkins-pipeline](https://www.youtube.com/watch?v=WvcHQtyPcTs&list=PL0mwG7J1IRFBDNX1FzLffWsaCemXo13-w&index=2&t=2895s) <br>
-OWASP scan----> Vulneranility scan on source code
+OWASP scan----> Vulneranility scan on source code <br>
+Docker pipeline plus in has to install to work with "withDockerRegistry" <br>
 
 
 ## Practiced once
