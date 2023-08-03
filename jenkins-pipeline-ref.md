@@ -45,7 +45,6 @@ sshagent=====> we have to install " SSH Agent Plugin" & also need to configure t
 chown -R ubuntu:ubuntu /opt  ============> changing ownership permissions on opt dorectpry
 
 ```
-![test](images/ssh-agent.PNG)
 
 ![ssh-agent](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/9be9df4c-d066-42e7-bfac-ca77b924b972)
 
