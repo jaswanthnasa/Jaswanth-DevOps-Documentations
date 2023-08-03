@@ -130,7 +130,7 @@ pipeline {
             steps {
                 script{
 
-                        withDockerRegistry(credentialsId: 'dokcer-hub') {
+                        withDockerRegistry(credentialsId: 'docker-hub') {
     
                         sh "docker build -t shopping-cart -f docker/Dockerfile ."
                         sh "docker tag  shopping-cart jas09563/shopping-cart:latest"
@@ -144,7 +144,7 @@ pipeline {
          stage('Docker Run') {
             steps {
                 script{
-                    withDockerRegistry(credentialsId: 'dokcer-hub') {
+                    withDockerRegistry(credentialsId: 'docker-hub') {
                         
                         sh "docker run -d --name shop-shop -p 8070:8070 jas09563/shopping-cart:latest"
                         
