@@ -69,17 +69,125 @@ in browser use  below <br>
 user-name: nagiosadmin <br>
 password: given password**
 
-## NRPE
+## adding-host[slave]-into-nagios-server[master]
+
 > commands to run on nagios hosts [slaves]
 ```
 sudo apt update && sudo apt install nagios-nrpe-server nagios-plugins
+sudo vi /etc/nagios/nrpe.cfg
+```
+ uncommet and replace server-address=master-ip
+```
+sudo service nagios-nrpe-server restart
+```
+
+> commands to run on nagios server [Master]
+```
+cd /usr/local/nagios/etc/objects
+sudo vi localhost.cfg
+```
+ have to insert the host-server details in localhost.cfg
+
+
+
+
+```
+define host {
+        use                          linux-server
+        host_name                    My-host3
+        alias                        Ubuntu Host
+        address                      54.172.91.179
+        register                     1
+}
+
+define service {
+      host_name                       My-host3
+      service_description             PING
+      check_command                   check_ping!100.0,20%!500.0,60%
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       My-host3
+      service_description             Check Users
+      check_command           check_local_users!20!50
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       My-host3
+      service_description             Local Disk
+      check_command                   check_local_disk!20%!10%!/
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       My-host3
+      service_description             Check SSH
+      check_command                   check_ssh
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+
+define service {
+      host_name                       My-host3
+      service_description             Total Process
+      check_command                   check_local_procs!250!400!RSZDT
+      max_check_attempts              2
+      check_interval                  2
+      retry_interval                  2
+      check_period                    24x7
+      check_freshness                 1
+      contact_groups                  admins
+      notification_interval           2
+      notification_period             24x7
+      notifications_enabled           1
+      register                        1
+}
+```
+
+```
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
 ```
 ```
-vi /etc/nagios/nrpe.cfg
-```
-Update allowed_hosts=nagios-server-public-ip [master]
-```
-sudo /etc/init.d/nagios-nrpe-server restart 
+sudo service nagios-nrpe-server restart
+sudo service apache2 restart
+sudo service nagios restart
 ```
 
 
