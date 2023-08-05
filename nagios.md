@@ -74,7 +74,13 @@ password: given password**
 ```
 sudo apt update && sudo apt install nagios-nrpe-server nagios-plugins
 ```
+```
 vi /etc/nagios/nrpe.cfg
+```
+Update allowed_hosts=nagios-server-public-ip [master]
+```
+sudo /etc/init.d/nagios-nrpe-server restart 
+```
 
 
 
