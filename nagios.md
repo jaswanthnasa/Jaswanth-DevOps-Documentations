@@ -69,5 +69,12 @@ in browser use  below <br>
 user-name: nagiosadmin <br>
 password: given password**
 
+## NRPE
+> commands to run on nagios hosts [slaves]
+```
+sudo apt update && sudo apt install nagios-nrpe-server nagios-plugins
+```
+vi /etc/nagios/nrpe.cfg
+
 
 
