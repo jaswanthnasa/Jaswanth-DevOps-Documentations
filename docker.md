@@ -8,5 +8,16 @@ sudo chmod 666 /var/run/docker.sock
 
 docker images======> to get the list of images <br>
 docker ps =========> to get the list of running containers <br>
-docker ps -a ======> to get the list of all  containers [both running and stopped] 
+docker ps -a ======> to get the list of all  containers [both running and stopped] <br>
+
+docker pull <image-name>================> it will pull images from the repository [docker hub] <br>
+docker push <image-name>================>  it will push  images to the repository [docker hub]  <br>
+
+docker run -it -d <imge-id> =============> img to container <br>
+dockeer stop <continer-name>=========>  to stop docker container <br>
+dockeer start <continer-name>=========>  to start docker container <br>
+dockeer restart <continer-name>=========>  to restart  docker container <br>
+docker rm <container-name> ==========> to remove sontainer <br>
+
+
 	
