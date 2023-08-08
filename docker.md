@@ -6,7 +6,7 @@ sudo usermod -aG docker $USER
 sudo chmod 666 /var/run/docker.sock
 ```
 
-docker images======> to get the list of images
-docker ps =========> to get the list of running containers
-docker ps -a ======> to get the list of all  containers [both running and stopped]
+docker images======> to get the list of images <br>
+docker ps =========> to get the list of running containers <br>
+docker ps -a ======> to get the list of all  containers [both running and stopped] 
 	
