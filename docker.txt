@@ -19,7 +19,10 @@ docker run -it -d <imge-id> =============> img to container <br>
 dockeer stop <continer-name>=========>  to stop docker container <br>
 dockeer start <continer-name>=========>  to start docker container <br>
 dockeer restart <continer-name>=========>  to restart  docker container <br>
-docker rm <container-name> ==========> to remove sontainer <br>
+docker rm <container-name> ==========> to remove container <br>
+
+example:
+docker run -d --name jenkins-server -p 8080:8080 jenkins/jenkins:latest
 
 
 	
