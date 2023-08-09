@@ -24,6 +24,7 @@ docker rm <container-name> ==========> to remove container <br>
 
 ===================================
 How to tag docker images and push to docker hub:
+docker login============>login to docker hub
 docker tag <old-img-name> <new-img-name>  // new img--->dockerhub-username/img-name:tag
 
 --------------
