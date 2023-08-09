@@ -22,6 +22,11 @@ dockeer start <continer-name>=========>  to start docker container <br>
 dockeer restart <continer-name>=========>  to restart  docker container <br>
 docker rm <container-name> ==========> to remove container <br>
 
+
+dockerhub-username/img-name
+docker tag <old-img-name> <new-img-name>
+
+
 example:
 docker run -d --name jenkins-server -p 8080:8080 jenkins/jenkins:latest
 
