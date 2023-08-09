@@ -23,8 +23,14 @@ dockeer restart <continer-name>=========>  to restart  docker container <br>
 docker rm <container-name> ==========> to remove container <br>
 
 
-
+How to tag docker images and push to docker hub:
 docker tag <old-img-name> <new-img-name>  // new img--->dockerhub-username/img-name:tag
+
+--------------
+example:
+docker tag tomcat jas09563/tomcat:v1
+docker push jas09563/tomcat:v1
+---------------------------
 
 
 
