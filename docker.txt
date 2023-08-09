@@ -23,8 +23,9 @@ dockeer restart <continer-name>=========>  to restart  docker container <br>
 docker rm <container-name> ==========> to remove container <br>
 
 
-dockerhub-username/img-name
-docker tag <old-img-name> <new-img-name>
+
+docker tag <old-img-name> <new-img-name>  // new img--->dockerhub-username/img-name:tag
+
 
 
 example:
