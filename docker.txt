@@ -22,7 +22,7 @@ dockeer start <continer-name>=========>  to start docker container <br>
 dockeer restart <continer-name>=========>  to restart  docker container <br>
 docker rm <container-name> ==========> to remove container <br>
 
-
+===================================
 How to tag docker images and push to docker hub:
 docker tag <old-img-name> <new-img-name>  // new img--->dockerhub-username/img-name:tag
 
