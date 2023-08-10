@@ -39,4 +39,6 @@ example:
 docker run -d --name jenkins-server -p 8080:8080 jenkins/jenkins:latest
 
 
-	
+================================
+-it ==========>interactive
+-d ===========>detach
