@@ -55,3 +55,17 @@ RUN apt-get install maven -y
 ======================
 docker build -t sai-img .
 docker run -it -d sai-container sai-img:latest
+
+
+
+
+
+
+
+
+
+
+
+
+** reference**
+https://docs.docker.com/get-started/02_our_app/
