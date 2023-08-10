@@ -42,3 +42,13 @@ docker run -d --name jenkins-server -p 8080:8080 jenkins/jenkins:latest
 ================================
 -it ==========>interactive
 -d ===========>detach
+
+
+==============================
+Dockerfile
+===================
+FROM ubuntu:18.04
+MAINTAINER rahul <rahul@example.com>
+RUN apt-get update
+RUN apt-get install default-jdk -y
+RUN apt-get install maven -y
