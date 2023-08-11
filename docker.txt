@@ -56,6 +56,15 @@ RUN apt-get install maven -y
 docker build -t sai-img .
 docker run -it -d sai-container sai-img:latest
 
+=======================================
+
+to stop all containers in single command
+docker stop container-1-id container-2-id container-3-id container-4-id container-5-id
+(or)
+docker stop $(docker ps -aq)
+
+docker ps -aq=======================> we can get all dokcer containers ids.
+docker images -q===================> to get the all img ids
 
 
 
@@ -67,5 +76,6 @@ docker run -it -d sai-container sai-img:latest
 
 
 
-** reference**
+
+** reference******
 https://docs.docker.com/get-started/02_our_app/
