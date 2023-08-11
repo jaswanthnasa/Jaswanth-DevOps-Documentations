@@ -69,8 +69,8 @@ docker images -q===================> to get the all img ids
 docker rm -f conteriner-id================> to remove a running container focely 
 
 
-docker exec -it fervent_fermi /bin/bash==============> to get inside of a container
-
+docker exec -it continer-id /bin/bash=========================> to get inside of a container
+ex: docker exec -it fervent_fermi /bin/bash
 
 
 
