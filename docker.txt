@@ -66,6 +66,8 @@ docker stop $(docker ps -aq)
 docker ps -aq=======================> we can get all dokcer containers ids.
 docker images -q===================> to get the all img ids
 
+docker rm -f conteriner-id================> to remove a running container focely 
+
 
 
 
