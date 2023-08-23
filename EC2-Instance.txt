@@ -1,4 +1,4 @@
-https://devopscube.com/mount-ebs-volume-ec2-instance/
+
 
 =========
 ALB pratice
@@ -12,3 +12,35 @@ chkconfig httpd on
 IP_ADDR=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 echo "Manual instance with IP $IP_ADDR" > /var/www/html/index.html
 echo "ok" > /var/www/html/health.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***reference*****
+https://devopscube.com/mount-ebs-volume-ec2-instance/
