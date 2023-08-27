@@ -1,0 +1,69 @@
+
+
+=========
+ALB pratice
+======
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+IP_ADDR=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+echo "Manual instance with IP $IP_ADDR" > /var/www/html/index.html
+echo "ok" > /var/www/html/health.html
+
+===================
+=================
+ALB-AUTOSCALING
+
+
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+mkdir app1
+cd app1
+echo "<h1>  welcome to application 2  </h1>" > index.html
+
+======================
+ALB+GSLB practice
+==========
+
+1) Create a temporary-inrance then follow the below steps 
+2) take the AMI of it  for both Applicaations [app1,app2]
+3) create a launch templates for both Applicaations [app1,app2]
+4) create auto-scaling groups for both Applicaations [app1,app2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***reference*****
+https://devopscube.com/mount-ebs-volume-ec2-instance/
