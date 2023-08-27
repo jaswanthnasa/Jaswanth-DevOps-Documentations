@@ -7,3 +7,5 @@ users---->Authentication
 policy----> Authorization
 
 As a devops engineer we need have seperate IAM user, we shouldn't user ROOT account
+
+5) craate group --> development-team----> add the user to team. -----> add policies directly to the group instead of individual IAM users
