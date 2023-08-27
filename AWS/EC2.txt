@@ -31,9 +31,29 @@ ALB+GSLB practice
 ==========
 
 1) Create a temporary-inrance then follow the below steps 
+
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+cd /var/www/html
+mkdir app1
+cd app1
+echo "<h1>  welcome to application 1  </h1>" > index.html
+
+mkdir app2
+cd app2
+echo "<h1>  welcome to application 2  </h1>" > index.html
+
 2) take the AMI of it  for both Applicaations [app1,app2]
 3) create a launch templates for both Applicaations [app1,app2]
-4) create auto-scaling groups for both Applicaations [app1,app2]
+4) Create a Target groups and then ALB
+5) create auto-scaling groups for both Applicaations [app1,app2]
+6) Try to access the DNS of ALB from the browser
+7) Path Based routing in ALB
+ALB--->listners--->rules---> add rule [App1-rule] ---> condition = /app1 or /app1*
+                                add rule [App2-rule] ---> condition = /app2 or /app2*
+                                  
+
 
 
 
