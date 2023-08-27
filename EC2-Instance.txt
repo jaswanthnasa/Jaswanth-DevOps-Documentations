@@ -27,6 +27,15 @@ cd app1
 echo "<h1>  welcome to application 2  </h1>" > index.html
 
 ======================
+ALB+GSLB practice
+==========
+
+1) Create a temporary-inrance then follow the below steps 
+2) take the AMI of it  for both Applicaations [app1,app2]
+3) create a launch templates for both Applicaations [app1,app2]
+4) create auto-scaling groups for both Applicaations [app1,app2]
+
+
 
 
 
