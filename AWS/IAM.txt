@@ -1,7 +1,9 @@
 1)Auntentication & Authorization [explain with Bank example]
-2)Create a IAM user then login, try to access S3 list buckets
+2)Create a IAM user then login, try to access S3 list buckets [ Test-101 name ]
 3)attach S3 full access persmisson to IAM user from root user
 4) again try to login to IAM user and try to access S3 buckets [now abe to access-> authorized]
 
 users---->Authentication
 policy----> Authorization
+
+As a devops engineer we need have seperate IAM user, we shouldn't user ROOT account
