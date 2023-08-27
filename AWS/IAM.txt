@@ -1,4 +1,4 @@
-1)Auntentication & Authorization
+1)Auntentication & Authorization [explain with Bank example]
 2)Create a IAM user then login, try to access S3 list buckets
 3)attach S3 full access persmisson to IAM user from root user
 4) again try to login to IAM user and try to access S3 buckets [now abe to access-> authorized]
