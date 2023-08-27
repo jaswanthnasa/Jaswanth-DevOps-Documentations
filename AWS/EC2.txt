@@ -87,3 +87,4 @@ ALB--->listners--->rules---> add rule [App1-rule] ---> condition = /app1 or /app
 
 ***reference*****
 https://devopscube.com/mount-ebs-volume-ec2-instance/
+https://www.youtube.com/watch?v=cR0xVifuOjE
