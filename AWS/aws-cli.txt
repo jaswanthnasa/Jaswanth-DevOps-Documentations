@@ -18,4 +18,8 @@ aws ec2 run-instances \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance}]' 'ResourceType=volume,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance-vol}]'
 
 
+==========================
+aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"  --query "Reservations[].Instances[].InstanceId"
+=================
+
 
