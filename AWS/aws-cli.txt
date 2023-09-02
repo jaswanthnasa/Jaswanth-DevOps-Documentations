@@ -6,7 +6,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 
 ===========================
-
+TO RUN A EC2 INSTANCE
 
 aws ec2 run-instances \
     --image-id ami-06f621d90fa29f6d0 \
@@ -18,9 +18,9 @@ aws ec2 run-instances \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance}]' 'ResourceType=volume,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance-vol}]'
 
 
-==========================
+===========================TO LISTOUT THE EC2-INSTANCES===============
 aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"  --query "Reservations[].Instances[].InstanceId"
 aws ec2 describe-instances --filters "Name=instance-state-name,Values=terminated"  --query "Reservations[].Instances[].InstanceId"
-=================
+=======================================================
 
 
