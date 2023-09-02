@@ -10,7 +10,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 
 aws ec2 run-instances \
     --image-id ami-06f621d90fa29f6d0 \
-    --count 5 \
+    --count 1 \
     --instance-type t2.micro \
     --key-name mykeypair \
     --security-group-ids sg-0ab73f3bb489f1180 \
@@ -20,6 +20,7 @@ aws ec2 run-instances \
 
 ==========================
 aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"  --query "Reservations[].Instances[].InstanceId"
+aws ec2 describe-instances --filters "Name=instance-state-name,Values=terminated"  --query "Reservations[].Instances[].InstanceId"
 =================
 
 
