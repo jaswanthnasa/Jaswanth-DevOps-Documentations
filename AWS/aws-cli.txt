@@ -4,3 +4,18 @@ install aws-cli on mac
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 
+
+===========================
+
+
+aws ec2 run-instances \
+    --image-id ami-06f621d90fa29f6d0 \
+    --count 5 \
+    --instance-type t2.micro \
+    --key-name mykeypair \
+    --security-group-ids sg-0ab73f3bb489f1180 \
+    --block-device-mappings "[{\"DeviceName\":\"/dev/sdf\",\"Ebs\":{\"VolumeSize\":30,\"DeleteOnTermination\":false}}]" \
+    --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance}]' 'ResourceType=volume,Tags=[{Key=Name,Value=Rahul-cli-ec2-instance-vol}]'
+
+
+
