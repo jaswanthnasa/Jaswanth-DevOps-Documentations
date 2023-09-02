@@ -1,0 +1,13 @@
+AWS CLI
+CLOUD FORMATION
+
+terraform
+kubernetes
+ansible
+
+
+git,github,jenkins,tomcat--------pipeline---2 yrs-
+
+git,github,jenkins,dokcerhub,docker-----------pipeline----3yrs
+
+git,github,jenkins,ansible,docker,kubernetes,terraform------pipeline -----4 yrs
