@@ -23,3 +23,13 @@ resource "aws_s3_bucket" "demo-bucket" {
     // acl = "${var.acl_value}"  
 }
 ```
+<br>
+
+#### commands to execute
+```
+terraform init
+tarraform plan
+terraform apply -auto-approve
+terraform destroy -auto-approve
+```
+
