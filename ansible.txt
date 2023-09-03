@@ -18,3 +18,6 @@ Handson-part
 3) login to server 2
       sudo adduser test
       sudo vi /etc/ssh/sshd_config---------->passwordautehntication to yes [previous value 'no']
+      sudo service ssh restart
+       sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> test ALL=(ALL:ALL) NOPASSWD: ALL
+      
