@@ -4,3 +4,17 @@
   though ssh
   agentless
   manages dest server though passwordless authentication
+
+==========
+Handson-part
+===============
+1) create 2 ubuntu servers
+2) login to server 1--
+      sudo adduser master
+      sudo vi /etc/ssh/sshd_config---------->passwordautehntication to yes [previous value 'no']
+      sudo service ssh restart
+      sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> master ALL=(ALL:ALL) NOPASSWD: ALL
+
+3) login to server 2
+      sudo adduser test
+      sudo vi /etc/ssh/sshd_config---------->passwordautehntication to yes [previous value 'no']
