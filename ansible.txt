@@ -13,7 +13,7 @@ Hands-on
       sudo adduser master
       sudo vi /etc/ssh/sshd_config---------->passwordautehntication to yes [previous value 'no']
       sudo service ssh restart
-      sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> master ALL=(ALL:ALL) NOPASSWD: ALL
+      sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> master ALL=(ALL:ALL) NOPASSWD: ALL ---------------------------->to come out  CTRL+X and then Y
       su master
       cd
       ssh-keygen 
@@ -39,7 +39,7 @@ Hands-on
 5) install ansible in master
       sudo apt-add-repository ppa:ansible/ansible
       sudo apt update
-      sudo apt install ansible
+      sudo apt install ansible -y
       cd /etc/ansible
       sudo vi hosts ---------------------> add cliet group and ips
       sudo vi ansible.cfg---------------> uncomment
