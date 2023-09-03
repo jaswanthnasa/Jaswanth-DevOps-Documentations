@@ -41,6 +41,9 @@ Hands-on
       sudo apt update
       sudo apt install ansible
       cd /etc/ansible
+      sudo vi hosts ---------------------> add cliet group and ips
+      sudo vi ansible.cfg---------------> uncomment
+      ansible -m ping client
 
 
 
