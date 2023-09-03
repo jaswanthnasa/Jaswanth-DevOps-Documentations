@@ -20,6 +20,7 @@ Hands-on
       ls -la
       cd .ssh [contains pub and private keys]
                 [ to connect to another server using password ssh test@server2-ip ]
+      
 
 3) login to server 2
       sudo adduser test
@@ -30,6 +31,16 @@ Hands-on
       cd
       sudo mkdir .ssh
       cd .ssh
-      sudo vi authorized_keys  []
+      sudo vi authorized_keys  [paste the pub key of master]
+
+4) execute below command in master [server-1]
+      ssh test@server2-ip
+
+5) install ansible in master
+      sudo apt-add-repository ppa:ansible/ansible
+      sudo apt update
+      sudo apt install ansible
+      cd /etc/ansible
+
 
 
