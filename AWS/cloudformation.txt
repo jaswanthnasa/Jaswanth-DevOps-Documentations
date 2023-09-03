@@ -58,7 +58,7 @@ Resources:
       ImageId: "ami-06f621d90fa29f6d0"
       InstanceType: t2.micro
 Outputs:
-  S3Bucket:
+  ec2instace:
     Description: Ec2-Instance Created using this template.
     Value: !Ref MyEC2Instance
      
