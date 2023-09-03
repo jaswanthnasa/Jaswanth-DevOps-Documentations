@@ -1,0 +1,4 @@
+1)Ansible ----> 
+  push based
+  though ssh
+  agentless
