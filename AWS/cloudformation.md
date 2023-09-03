@@ -1,9 +1,12 @@
-Install extensions in vs code----> 1) yaml by redhat
-                                   2)AWS tool kit
+#### Install extensions in vs code <br>
+1)yaml by redhat <br>
+2)AWS tool kit <br>
 
-========================================
-1)S3 bucket
-========================================
+======================
+
+
+## 1)S3 bucket
+```
 AWSTemplateFormatVersion: 2010-09-09
 Description: CloudFormation template for s3 bucket 
   
@@ -20,10 +23,11 @@ Outputs:
   S3Bucket:
     Description: Bucket Created using this template.
     Value: !Ref S3Bucket
+```
+<br>
 
-================================
-2)s3-bucket with parametes
-================================
+## 2)s3-bucket with parametes
+```
 AWSTemplateFormatVersion: 2010-09-09
 Description: CloudFormation template for s3 bucket 
 
@@ -45,11 +49,11 @@ Outputs:
   S3Bucket:
     Description: Bucket Created using this template.
     Value: !Ref S3Bucket
-=============================
-=========================================
+```
 
-3)EC2-instance
-==================================
+## 3)EC2-instance
+
+```
 
 Resources:  
   MyEC2Instance: 
@@ -61,10 +65,11 @@ Outputs:
   ec2instace:
     Description: Ec2-Instance Created using this template.
     Value: !Ref MyEC2Instance
+```
+<br>
 
-=========================================================
-4) EC2+S3 combined
-================================
+## 4) EC2+S3 combined
+```
 
 AWSTemplateFormatVersion: 2010-09-09
 Description: CloudFormation template for s3 bucket 
@@ -96,6 +101,5 @@ Outputs:
   Ec2instacce:
     Description: Ec2-Instance Created using this template.
     Value: !Ref Myfirstec2instacefromcloudformation  
-
-================================================
+```
      
