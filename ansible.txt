@@ -42,8 +42,11 @@ Hands-on
       sudo apt install ansible -y
       cd /etc/ansible
       sudo vi hosts ---------------------> add cliet group and ips
-      sudo vi ansible.cfg---------------> uncomment
-      ansible -m ping client
+
+         [client-group]
+          52.206.67.51 ansible_user=test
+
+      ansible -m ping client-group
 
 
 
