@@ -17,8 +17,9 @@ Hands-on
       su master
       cd
       ssh-keygen 
-      la -la
+      ls -la
       cd .ssh [contains pub and private keys]
+                [ to connect to another server using password ssh test@server2-ip ]
 
 3) login to server 2
       sudo adduser test
@@ -27,7 +28,8 @@ Hands-on
       sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> test ALL=(ALL:ALL) NOPASSWD: ALL
       su test
       cd
-      ssh-keygen 
-      la -la
-      cd .ssh [contains pub and private keys]
+      sudo mkdir .ssh
+      cd .ssh
+      sudo vi authorized_keys  []
+
 
