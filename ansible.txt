@@ -1,4 +1,5 @@
-1)Ansible ----> 
+1)Ansible --------> 
+  configuration managemnt tool
   push based
   though ssh
   agentless
