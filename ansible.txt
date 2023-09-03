@@ -3,3 +3,4 @@
   push based
   though ssh
   agentless
+  manages dest server though passwordless authentication
