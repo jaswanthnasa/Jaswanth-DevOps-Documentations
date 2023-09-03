@@ -1,0 +1,2 @@
+Install extensions in vs code----> 1) yaml by redhat
+                                   2)AWS tool kit
