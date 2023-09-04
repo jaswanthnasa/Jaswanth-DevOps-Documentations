@@ -4,3 +4,6 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 3) install eksctl -->open powershell [run as administrator]-----> choco install -y eksctl
+
+4) create EKS cluster using below command
+    eksctl create cluster --name demo-cluster --region us-east-1 --fargate
