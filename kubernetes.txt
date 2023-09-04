@@ -7,3 +7,20 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 4) create EKS cluster using below command
     eksctl create cluster --name demo-cluster --region us-east-1 --fargate
+
+
+
+
+
+
+
+
+
+
+
+
+==============
+Clean-Up:
+===============
+1)delete EKS cluster
+eksctl delete cluster --name demo-cluster --region us-east-1
