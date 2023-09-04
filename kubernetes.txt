@@ -24,6 +24,28 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 8) associate iam-oidc-provider to EKS cluster
   eksctl utils associate-iam-oidc-provider --cluster demo-cluster --region us-east-1 --approve
 
+9) download iam_policy
+   curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/install/iam_policy.json
+
+10) Create IAM Policy
+
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam_policy.json
+
+11) create IAM role
+
+eksctl create iamserviceaccount \
+  --cluster=demo-cluster \
+  --namespace=kube-system \
+  --name=aws-load-balancer-controller \
+  --role-name AmazonEKSLoadBalancerControllerRole \
+  --attach-policy-arn=arn:aws:iam::619399272393:policy/AWSLoadBalancerControllerIAMPolicy \
+  --region us-east-1 \
+  --approve
+    
+   
+
 
 
 
