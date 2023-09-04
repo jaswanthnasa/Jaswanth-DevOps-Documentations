@@ -43,11 +43,11 @@ Hands-on
       cd /etc/ansible
       sudo vi hosts ---------------------> add cliet group and ips
 
-         [client-group]
+         [client]
           52.206.67.51 ansible_user=test
 
-      ansible -m ping client-group
-      ansible -m ping client-group -o
+      ansible -m ping client
+      ansible -m ping client -o
 
 ansible client -a "ls -l /opt"
 ansible client -a "cat /etc/passwd"
@@ -55,6 +55,14 @@ ansible client -a "sudo touch /opt/rushi1"
 ansible client -a "touch /opt/rushi" --become     (or)  ansible client -a "touch /opt/rushi" -b
 ansible client -m shell -a "hostname"
 ansible client -m shell -a "df -h"
+
+sudo touch devops
+ansible client -m copy -a "src=/opt/devops dest=/opt/" --become
+
+ansible client -a "git --version"
+
+ansible client -m apt -a "name=maven state=present" --become
+
 
 
 
