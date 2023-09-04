@@ -5,6 +5,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 
 3) install eksctl -->open powershell [run as administrator]-----> choco install -y eksctl
 
+4) install helm -----> choco install kubernetes-helm
+
 4) create EKS cluster using below command
     eksctl create cluster --name demo-cluster --region us-east-1 --fargate
 
