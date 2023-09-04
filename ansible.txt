@@ -47,6 +47,7 @@ Hands-on
           52.206.67.51 ansible_user=test
 
       ansible -m ping client-group
+      ansible -m ping client-group -o
 
 
 
