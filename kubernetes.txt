@@ -11,6 +11,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 5) updating config file [run below command in command prompt]
      aws eks update-kubeconfig --region us-east-1 --name demo-cluster
 
+6)creating fargate profile [if we face difficult in pasting in command prompt use git-bash]
+    eksctl create fargateprofile \
+    --cluster demo-cluster \
+    --region us-east-1 \
+    --name alb-sample-app \
+    --namespace game-2048
+
 
 
 
