@@ -1,2 +1,4 @@
 1) install kubectl -->curl.exe -LO "https://dl.k8s.io/release/v1.28.1/bin/windows/amd64/kubectl.exe"
-2) install eksctl --> choco install eksctl
+2) install choco---------> open powershell [run as administrator]----->
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+3) install eksctl -->open powershell [run as administrator]-----> choco install -y eksctl
