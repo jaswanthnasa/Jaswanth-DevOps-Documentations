@@ -63,6 +63,26 @@ ansible client -a "git --version"
 
 ansible client -m apt -a "name=maven state=present" --become
 
+ansible client -m service -a 'name=apache2 state=stopped' --become
+ansible client -m service -a 'name=apache2 state=started' --become
+ansible client -m service -a 'name=apache2 state=restarted' --become
+
+
+
+---
+- hosts: apache
+  sudo: yes
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+
+    - name: "copying file"
+      copy: "src=/opt/test dest=/opt/"
+      
+    - user: name=rushi
+      name: "creating user"
+
+
 
 
 
