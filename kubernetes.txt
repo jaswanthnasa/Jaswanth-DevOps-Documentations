@@ -8,6 +8,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 4) create EKS cluster using below command
     eksctl create cluster --name demo-cluster --region us-east-1 --fargate
 
+5) updating config file [run below command in command prompt]
+     aws eks update-kubeconfig --region us-east-1 --name demo-cluster
+
 
 
 
