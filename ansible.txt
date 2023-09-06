@@ -81,8 +81,19 @@ re-usability
 cd /opt
 mkdir playbooks
 cd playbooks
+touch sample.yaml
+
+---
+- hosts: client
+  become: yes
+  tasks:
+    - name: installing apache2
+      apt: name=apache2 state=latest
 
 
+to run a playbook -------------->ansible-playbook sample.yml
+
+=======================
 
 ---
 - hosts: apache
@@ -94,8 +105,11 @@ cd playbooks
     - name: "copying file"
       copy: "src=/opt/test dest=/opt/"
       
-    - user: name=rushi
+    - user: name=raj
       name: "creating user"
+
+
+
 
 
 
