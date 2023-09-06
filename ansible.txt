@@ -109,6 +109,8 @@ to run a playbook -------------->ansible-playbook sample.yml
       name: "creating user"
 
 
+https://www.softwaretestinghelp.com/ansible-playbooks-ansible-vaults/
+
 
 
 
