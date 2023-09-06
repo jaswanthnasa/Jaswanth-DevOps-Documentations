@@ -10,7 +10,9 @@ Hands-on
 ===============
 1) create 2 ubuntu servers
 2) login to server 1
-      sudo adduser master
+      sudo adduser master  
+      sudo cat /etc/passwd     ------------------> command to check user details 
+
       sudo vi /etc/ssh/sshd_config---------->passwordautehntication to yes [previous value 'no']
       sudo service ssh restart
       sudo visudo--------------------------->below root ALL=(ALL:ALL) ALL  -----> master ALL=(ALL:ALL) NOPASSWD: ALL ---------------------------->to come out  CTRL+X and then Y
