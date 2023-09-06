@@ -103,7 +103,7 @@ to run a playbook -------------->ansible-playbook sample.yml
       apt: name=apache2 update_cache=yes state=latest
 
     - name: "copying file"
-      copy: "src=/opt/test dest=/opt/"
+      copy: "src=/opt/playbooks dest=/opt/"
       
     - user: name=raj
       name: "creating user"
