@@ -85,31 +85,41 @@ cd /opt
 mkdir playbooks
 cd playbooks
 touch sample.yaml
+=========================================
+Example 1: Create the file on the target machines or servers as mentioned in the inventory file and the client group
 
----
 - hosts: client
-  become: yes
+  become: true
   tasks:
-    - name: installing apache2
-      apt: name=apache2 state=latest
+  - name: Create a file
+    file: path=/opt/Rahul.txt state=touch
 
 
 to run a playbook -------------->ansible-playbook sample.yml
 
-=======================
+============================================================
+Example 2: Create a directory with the mode as 775 and owner/group as slave.
 
 ---
-- hosts: apache
-  sudo: yes
+- hosts: client
+  become: true
   tasks:
-    - name: install apache2
-      apt: name=apache2 update_cache=yes state=latest
+  - name: Create directory
+    file: path=/opt/Australia state=directory mode=775 owner=slave group=slave
 
-    - name: "copying file"
-      copy: "src=/opt/playbooks dest=/opt/"
-      
-    - user: name=raj
-      name: "creating user"
+=====================================================
+Example 3: Create multiple directories
+
+---
+- hosts: client
+  become: true
+  tasks:
+  - name: Create multiple directories
+    file: path={{item}} state=directory
+    with_items:
+     - '/opt/class1'
+     - '/opt/class2'
+     - '/opt/class3'
 
 
 ****References**********
