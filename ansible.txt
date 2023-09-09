@@ -58,7 +58,7 @@ Adhoc-commands
 ==================
 ansible client -a "ls -l /opt"
 ansible client -a "cat /etc/passwd"
-ansible client -a "sudo touch /opt/rushi1"
+ansible client -a "sudo touch /opt/xyz"
 ansible client -a "touch /opt/xyz" --become     (or)  ansible client -a "touch /opt/xyz" -b
 ansible client -m shell -a "hostname"
 ansible client -m shell -a "df -h"
@@ -88,6 +88,7 @@ touch sample.yaml
 =========================================
 Example 1: Create the file on the target machines or servers as mentioned in the inventory file and the client group
 
+---
 - hosts: client
   become: true
   tasks:
