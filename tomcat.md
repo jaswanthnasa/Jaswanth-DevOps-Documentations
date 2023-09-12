@@ -4,7 +4,7 @@
 
 1. To donwload tomcat to our ubuntu machine/inatance 
 ```
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
 ```
 wget======> to download files from web
 
