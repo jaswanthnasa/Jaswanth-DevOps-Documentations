@@ -15,7 +15,7 @@ sudo su
 ```
 4) Unzip/ untar the file use below command <br/>
 ```
-tar -xvzf apache-tomcat-9.0.78.tar.gz
+tar -xvzf apache-tomcat-9.0.80.tar.gz
 ```
 5) Rename folder to tomcat9 <br/>
 ```
