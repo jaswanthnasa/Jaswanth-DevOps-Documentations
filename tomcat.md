@@ -21,7 +21,7 @@ tar -xvzf apache-tomcat-9.0.80.tar.gz
 ```
 5) Rename folder to tomcat9 <br/>
 ```
-mv apache-tomcat-9.0.78 tomcat9
+mv apache-tomcat-9.0.80 tomcat9
 ```
 
 6) goto the below path <br/>
