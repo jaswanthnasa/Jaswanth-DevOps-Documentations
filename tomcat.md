@@ -2,7 +2,9 @@
 
 1. Launch instance with java pre-intalled
 
-1. To donwload tomcat to our ubuntu machine/inatance 
+1. To donwload tomcat to our ubuntu machine/inatance
+
+   cd /opt <br>
 ```
 sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
 ```
