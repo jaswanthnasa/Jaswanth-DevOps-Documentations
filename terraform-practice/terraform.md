@@ -1,3 +1,10 @@
+#### Install extensions in vs code
+1)HashiCorp Terraform <br>
+2)HashiCorp HCL <br>
+
+
+
+
 ## EC2 instance
 ```
 provider "aws" {
