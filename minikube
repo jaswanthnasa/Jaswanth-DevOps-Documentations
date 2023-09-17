@@ -44,5 +44,5 @@ spec:
 
  then kubectl apply -f file-name.yaml
 
- minikube service nginx-service
+ minikube service nginx-service=================> to get the URL for the service
 
