@@ -44,3 +44,5 @@ spec:
 
  then kubectl apply -f file-name.yaml
 
+ minikube service nginx-service
+
