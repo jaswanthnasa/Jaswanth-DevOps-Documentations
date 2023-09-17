@@ -70,6 +70,10 @@ spec: {}
 4) edit example-argocd-server config from cluster ip to nodeport ---------->Type: NodePort
   kubectl edit example-argocd-server
 
+5)  minikube service example-argocd-server
+
+6) access the url from browser ------->  http://127.0.0.1:51858
+
 
 
 
