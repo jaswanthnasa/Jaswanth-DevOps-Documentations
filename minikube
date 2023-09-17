@@ -74,6 +74,14 @@ spec: {}
 
 6) access the url from browser ------->  http://127.0.0.1:51858
 
+7)kubectl edit secret example-argocd-cluster ------------------> to get the argocd secret
+
+8) echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d ---------------------> decoding to get the argocd passsword
+
+so arcd-----username=admin 
+            passowrd=output of the above one
+
+
 
 
 
