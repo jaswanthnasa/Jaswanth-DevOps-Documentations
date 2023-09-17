@@ -46,7 +46,7 @@ spec:
 
  minikube service nginx-service=================> to get the URL for the service
 
-====================================
+=========================================CD using argocd==========================
 
 1)Install argocd operator using [https://operatorhub.io/operator/argocd-operator]
 
