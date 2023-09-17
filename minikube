@@ -7,3 +7,40 @@ minikube status
 kubectl get no
 
 to get inside of minikube node-------> minikube ssh
+
+
+create a folder --example mk and create file pod-service.yaml
+
+=================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app.kubernetes.io/name: proxy
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+        name: http-web-svc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app.kubernetes.io/name: proxy
+  ports:
+  - name: name-of-service-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort 
+=========================
+
+ then kubectl apply -f file-name.yaml
+
