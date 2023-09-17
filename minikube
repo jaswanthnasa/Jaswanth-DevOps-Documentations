@@ -1,3 +1,5 @@
 https://www.youtube.com/watch?v=xNefZ51jHKg&t=148s
 
 Note: Virtualization should be emabled to work with docker/minikube [how to check ?  task manager-->performance ---> cpu ]
+
+to get inside of minikube node-------> minikube ssh
