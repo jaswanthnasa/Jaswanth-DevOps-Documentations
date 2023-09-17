@@ -46,3 +46,30 @@ spec:
 
  minikube service nginx-service=================> to get the URL for the service
 
+====================================
+
+1)Install argocd operator using [https://operatorhub.io/operator/argocd-operator]
+
+curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.25.0/install.sh | bash -s v0.25.0
+kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
+kubectl get csv -n operators
+
+2)then create a file like argo-cd.yaml
+==
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: example-argocd
+  labels:
+    example: basic
+spec: {}
+==
+
+3)then apply it-------> kubectl apply -f argo-cd.yaml
+
+4) edit example-argocd-server config from cluster ip to nodeport
+  kubectl edit example-argocd-server
+
+
+
+
