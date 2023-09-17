@@ -78,8 +78,23 @@ spec: {}
 
 8) echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d ---------------------> decoding to get the argocd passsword
 
-so arcd-----username=admin 
+so arcd creds -----username=admin 
             passowrd=output of the above one
+
+9) create a new app in ARCOCD  ------------> 
+
+                      **GENERAL**
+                      Application name= jaswanth
+                      project name= default
+                      sync policy= automatic
+                      **SOURCE**
+                      Repository URL= https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero
+                      path= java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests
+                      **DESTINATION**
+                      cluster url = https://kubernetes.default.svc
+                      namespace = default
+
+
 
 
 
