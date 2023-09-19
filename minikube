@@ -166,6 +166,12 @@ pipeline {
 }  
 ====================================================================================================================
 
+IDEA--IMPLEMENTAION----------
+BUILD_NUMBER=${BUILD_NUMBER}
+TAG_NUMBER=`expr ${BUILD_NUMBER} - 1`
+
+sed -i "s/${TAG_NUMBER}/${BUILD_NUMBER}/g" test.yaml
+
 
 
 
