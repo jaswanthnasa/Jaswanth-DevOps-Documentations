@@ -2,6 +2,6 @@
 variables.tf is where you declare your variables, while terraform. tfvars is where you assign values to those variables.
 
 2) passing tfvars file during run time [ if we are using terraform.tfvars  no need to pass from run time , bydefault tf considers it]
-terraform plan -var-file=abcd.tfvars
+terraform plan -var-file="abcd.tfvars"
 
 
