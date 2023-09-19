@@ -170,7 +170,10 @@ IDEA--IMPLEMENTAION----------
 BUILD_NUMBER=${BUILD_NUMBER}
 TAG_NUMBER=`expr ${BUILD_NUMBER} - 1`
 
-sed -i "s/${TAG_NUMBER}/${BUILD_NUMBER}/g" test.yaml
+## sed -i "s/${TAG_NUMBER}/${BUILD_NUMBER}/g" test.yaml
+## sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' deployment.yaml
+
+sed -i 's/ultimate-cicd:.*/ultimate-cicd:${BUILD_NUMBER}/g' deployment.yaml=========can use this
 
 
 
