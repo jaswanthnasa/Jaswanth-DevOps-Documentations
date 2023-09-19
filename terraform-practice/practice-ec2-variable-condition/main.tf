@@ -7,7 +7,7 @@ resource "aws_instance" "instance_1" {
     instance_type = "t2.micro"
     key_name = "mykeypair"
     tags = {
-      Name = "My-First-Instace"
+      Name = var.name
     }
   
 }
