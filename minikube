@@ -2,6 +2,7 @@ https://www.youtube.com/watch?v=xNefZ51jHKg&t=148s
 
 https://minikube.sigs.k8s.io/docs/start/
 install kubectl -->curl.exe -LO "https://dl.k8s.io/release/v1.28.1/bin/windows/amd64/kubectl.exe"
+https://docs.docker.com/desktop/install/windows-install/
 
 Note: Virtualization should be emabled to work with docker/minikube [how to check ?  task manager-->performance ---> cpu ]
 
