@@ -10,6 +10,7 @@ minikube start
 minikube status
 kubectl get no
 
+kubectl delete all --all -------------> to delete all the resources in k8s cluster
 to get inside of minikube node-------> minikube ssh
 
 
