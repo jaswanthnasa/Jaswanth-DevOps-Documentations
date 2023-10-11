@@ -12,7 +12,7 @@ kubectl get no
 
 kubectl delete all --all -------------> to delete all the resources in k8s cluster
 
-
+kubectl apply -f pod.yaml -n rahul-devops
 kubectl get po -n rahul-devops -o wide
 to get inside of minikube node-------> minikube ssh
 curl 10.244.0.127
