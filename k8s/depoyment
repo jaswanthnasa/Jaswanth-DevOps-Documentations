@@ -21,4 +21,12 @@ spec:
         ports:
         - containerPort: 80
 
-===============================          
+===============================     
+
+kubectl apply -f deployment.yaml
+kubectl get deploy
+kubectl get rs
+kubectl get po
+
+kubectl delete po <pod_name> 
+kuebctl get po -w
