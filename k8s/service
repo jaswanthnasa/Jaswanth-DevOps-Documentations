@@ -27,5 +27,8 @@ spec:
         ports:
         - containerPort: 8000
 ============================================================
-4)minikube ssh
+
+4)kubectl apply -f deployment.yaml
+5)kubectl get po -o wide
+6)minikube ssh
 curl -L 10.244.0.149:8000/demo
