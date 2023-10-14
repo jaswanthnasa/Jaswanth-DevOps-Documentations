@@ -30,3 +30,4 @@ kubectl get po
 
 kubectl delete po <pod_name> 
 kuebctl get po -w
+kubectl get po -v=7  // verbose mode
