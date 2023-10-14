@@ -1,0 +1,31 @@
+git clone https://github.com/iam-veeramalla/Docker-Zero-to-Hero.git
+cd Docker-Zero-to-Hero/examples/python-web-app
+
+1)docker build -t jas09563/python-sample-app-demo:v1 .
+2)docker push
+
+3)================= deployment.yaml======================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-python-app
+  labels:
+    app: sample-python-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sample-python-app
+  template:
+    metadata:
+      labels:
+        app: sample-python-app
+    spec:
+      containers:
+      - name: python-app
+        image: jas09563/python-sample-app-demo:v1
+        ports:
+        - containerPort: 8000
+============================================================
+4)minikube ssh
+curl -L 10.244.0.149:8000/demo
