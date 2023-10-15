@@ -44,3 +44,6 @@ kubectl port-forward svc/python-service 80:80
 
 kubeshark installation:
 curl -LO https://github.com/kubeshark/kubeshark/releases/download/50.4/kubeshark.exe        
+kubeshark tap
+kubeshark clean
+http and request.path=="/demo"------------------>fiter
