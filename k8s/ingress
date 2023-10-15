@@ -18,3 +18,11 @@ spec:
 =========================================================
 1)install ingress-controller
 minikube addons enable ingress
+
+2)kubectl get all -n ingress-nginx
+
+3)kubectl logs pod/ingress-nginx-controller-7799c6795f-z7q6n -n ingress-nginx
+
+
+
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
