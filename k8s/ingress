@@ -28,7 +28,7 @@ minikube addons enable ingress
 
 
 
-
+http://minikube-example.com:61584/
 
 
 
