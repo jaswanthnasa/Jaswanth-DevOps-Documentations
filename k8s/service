@@ -31,7 +31,8 @@ spec:
 4)kubectl apply -f deployment.yaml
 5)kubectl get po -o wide
 6)minikube ssh
-curl -L 10.244.0.149:8000/demo
+curl -L 10.244.0.149:8000/demo ---------------> pod ip
+curl -L 10.108.244.130:8083/demo --------------> service ip
 7)minikube service python-service
 
 
