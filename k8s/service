@@ -33,7 +33,26 @@ spec:
 6)minikube ssh
 curl -L 10.244.0.149:8000/demo ---------------> pod ip
 curl -L 10.108.244.130:8083/demo --------------> service ip
-7)minikube service python-service
+
+7)
+==============================service.yaml=================
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-service
+spec:
+  type: NodePort
+  selector:
+    app: sample-python-app
+  ports:
+    - port: 8083
+      targetPort: 8000
+      nodePort: 30006
+
+===================================================
+
+
+8)minikube service python-service
 
 
 
