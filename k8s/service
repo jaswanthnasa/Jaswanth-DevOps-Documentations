@@ -2,7 +2,7 @@ git clone https://github.com/jaswanthnasa/Docker-Zero-to-Hero.git
 cd Docker-Zero-to-Hero/examples/python-web-app
 
 1)docker build -t jas09563/python-sample-app-demo:v1 .
-2)docker push
+2)docker push jas09563/python-sample-app-demo:v1
 
 3)================= deployment.yaml======================
 apiVersion: apps/v1
