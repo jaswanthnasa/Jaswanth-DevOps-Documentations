@@ -34,8 +34,11 @@ minikube addons enable ingress
 
 
 
-https://youtu.be/Gip-Q6AWpcY?si=4iu2um1Tcsh5ZLdH
 
 
 
+
+************ref
 https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+https://github.com/cloudxlab/minikube-static-app.git
+https://youtu.be/Gip-Q6AWpcY?si=4iu2um1Tcsh5ZLdH
