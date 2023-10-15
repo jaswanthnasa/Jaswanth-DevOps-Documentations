@@ -1,4 +1,4 @@
-git clone https://github.com/iam-veeramalla/Docker-Zero-to-Hero.git
+git clone https://github.com/jaswanthnasa/Docker-Zero-to-Hero.git
 cd Docker-Zero-to-Hero/examples/python-web-app
 
 1)docker build -t jas09563/python-sample-app-demo:v1 .
