@@ -34,3 +34,9 @@ spec:
 curl -L 10.244.0.149:8000/demo
 
 kubectl port-forward svc/python-service 80:80
+
+
+
+
+kubeshark installation:
+curl -LO https://github.com/kubeshark/kubeshark/releases/download/50.4/kubeshark.exe        
