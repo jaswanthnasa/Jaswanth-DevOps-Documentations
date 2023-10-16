@@ -28,7 +28,19 @@ minikube addons enable ingress
 
 
 
+
+==========================
+C:\Windows\System32\drivers\etc
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+	127.0.0.1     foo.bar.com            # minikube
+=======================================
+
 http://minikube-example.com:61584/
+
+http://foo.bar.com:57168/demo/
 
 
 
