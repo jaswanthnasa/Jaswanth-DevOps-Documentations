@@ -11,6 +11,32 @@ curl -L 10.108.244.130:8083/demo --------------> service ip
 6)kubectl apply -f service.yaml
 8)minikube service python-service
 
+****************************************************************************************
+****************************************************************************************
+
+
+
+
+
+
+
+
+
+
+kubectl port-forward svc/python-service 80:80
+
+
+
+============================================================================
+kubeshark installation:
+curl -LO https://github.com/kubeshark/kubeshark/releases/download/50.4/kubeshark.exe        
+kubeshark tap
+kubeshark clean
+http and request.path=="/demo"------------------>fiter
+============================================================================
+
+
+
 ================= deployment.yaml======================
 apiVersion: apps/v1
 kind: Deployment
@@ -51,18 +77,3 @@ spec:
 ===================================================
 
 
-
-
-
-
-
-kubectl port-forward svc/python-service 80:80
-
-
-
-
-kubeshark installation:
-curl -LO https://github.com/kubeshark/kubeshark/releases/download/50.4/kubeshark.exe        
-kubeshark tap
-kubeshark clean
-http and request.path=="/demo"------------------>fiter
