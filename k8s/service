@@ -9,7 +9,8 @@ cd Docker-Zero-to-Hero/examples/python-web-app
 curl -L 10.244.0.149:8000/demo ---------------> pod ip
 curl -L 10.108.244.130:80/demo --------------> service ip
 6)kubectl apply -f service.yaml
-8)minikube service python-service
+7)minikube service python-service
+minikube service python-service --url
 
 ****************************************************************************************
 ****************************************************************************************
