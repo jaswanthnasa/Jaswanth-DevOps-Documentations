@@ -3,8 +3,15 @@ cd Docker-Zero-to-Hero/examples/python-web-app
 
 1)docker build -t jas09563/python-sample-app-demo:v1 .
 2)docker push jas09563/python-sample-app-demo:v1
+3)kubectl apply -f deployment.yaml
+4)kubectl get po -o wide
+5)minikube ssh
+curl -L 10.244.0.149:8000/demo ---------------> pod ip
+curl -L 10.108.244.130:8083/demo --------------> service ip
+6)kubectl apply -f service.yaml
+8)minikube service python-service
 
-3)================= deployment.yaml======================
+================= deployment.yaml======================
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,14 +34,6 @@ spec:
         ports:
         - containerPort: 8000
 ============================================================
-
-4)kubectl apply -f deployment.yaml
-5)kubectl get po -o wide
-6)minikube ssh
-curl -L 10.244.0.149:8000/demo ---------------> pod ip
-curl -L 10.108.244.130:8083/demo --------------> service ip
-
-7)
 ==============================service.yaml=================
 apiVersion: v1
 kind: Service
@@ -52,7 +51,7 @@ spec:
 ===================================================
 
 
-8)minikube service python-service
+
 
 
 
