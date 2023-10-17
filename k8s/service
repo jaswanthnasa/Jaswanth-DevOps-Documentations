@@ -7,7 +7,7 @@ cd Docker-Zero-to-Hero/examples/python-web-app
 4)kubectl get po -o wide
 5)minikube ssh
 curl -L 10.244.0.149:8000/demo ---------------> pod ip
-curl -L 10.108.244.130:8083/demo --------------> service ip
+curl -L 10.108.244.130:80/demo --------------> service ip
 6)kubectl apply -f service.yaml
 8)minikube service python-service
 
