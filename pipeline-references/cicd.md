@@ -60,6 +60,11 @@ chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
 cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 ./sonar.sh start
 ```
+   access sonar ------> publicip:9000 <br>
+   credentials-----------> admin/admin <br>
+   generate token to conenct to jenkins -----------> User > My Account > Security
+   
+
 
 
 
