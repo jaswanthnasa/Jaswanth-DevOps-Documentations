@@ -79,10 +79,10 @@ kubectl get csv -n operators
 
 7) kubectl edit secret example-argocd-cluster ------------------> to get the argocd secret
 
-8) echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d ---------------------> decoding to get the argocd passsword
+8) echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d ---------------------> decoding to get the argocd passsword <br>
 
-so arcd creds -----username=admin 
-            passowrd=output of the above one
+   so arcd creds -----username=admin <br>
+                      passowrd=output of the above one
 
 9) create a new app in ARCOCD  ------------> 
 
