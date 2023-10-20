@@ -43,6 +43,8 @@ sudo apt-get install jenkins -y
 6) create github creds <br>
  manage jenkins--->credentials-->Add Credentials
 
+![credentials](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/35e8823b-732d-4d5e-ae50-959bb7b71127)
+
 7)SonarQube installation
 ```
 apt install unzip
@@ -56,7 +58,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 ./sonar.sh start
 ```
 
-![credentials](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/35e8823b-732d-4d5e-ae50-959bb7b71127)
+
 
 
 
