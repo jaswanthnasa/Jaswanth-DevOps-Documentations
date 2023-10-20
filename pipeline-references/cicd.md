@@ -91,7 +91,7 @@ kubectl get csv -n operators
                       project name= default
                       sync policy= automatic
                       **SOURCE**
-                      Repository URL= https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero
+                      Repository URL= https://github.com/jaswanthnasa/Jenkins-Zero-To-Hero.git
                       path= java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests
                       **DESTINATION**
                       cluster url = https://kubernetes.default.svc
