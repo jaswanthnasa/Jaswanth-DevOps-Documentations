@@ -1,3 +1,7 @@
+# CICD pipelien for Java Application contains 2 stages
+## CI 
+## CD
+
 ## CI setup
 1) Jenkins intallation and login <br>
 
