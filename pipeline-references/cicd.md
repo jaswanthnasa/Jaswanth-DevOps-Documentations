@@ -70,7 +70,7 @@ kubectl get csv -n operators
 
 3) then apply it-------> kubectl apply -f argo-cd.yaml
 
-4) edit example-argocd-server config from cluster ip to nodeport ---------->Type: NodePort
+4) edit service *example-argocd-server*  from cluster ip to nodeport ---------->Type: NodePort
   kubectl edit service example-argocd-server
 
 5) minikube service example-argocd-server
