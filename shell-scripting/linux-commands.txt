@@ -21,3 +21,10 @@ cat rahul.txt | head -7 | tail -1
 df --------disk space
 free ------memory
 nproc -----cpu 
+
+find------> sudo find / -name jaswnath
+
+curl ---> Client URL (cURL, pronounced “curl”) is a command line tool that enables data exchange between a device and a server through a terminal
+wget ---->Wget is a networking command-line tool that lets you download files and interact with REST APIs.
+
+curl  vs wget ---> curl will show the output in the console. On the other hand, wget will download it into a file
