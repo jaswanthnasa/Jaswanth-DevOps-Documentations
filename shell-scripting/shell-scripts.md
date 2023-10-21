@@ -1,6 +1,6 @@
 ## Shell-scripts realtime usecases
 
-1. Clearing cache and Buffer scripts:
+### 1. Clearing cache and Buffer scripts:
 
 ```
 #bin/bash
@@ -33,7 +33,7 @@ crontab -e
 
 
 
-2. Scripts to check always make java services up:
+### 2. Scripts to check always make java services up:
 
 ```
 #!/bin/bash
@@ -55,7 +55,7 @@ fi
 
 
 
-3. Mysql backups:
+### 3. Mysql backups:
 
 ```-
 YEAR=`date +%Y`
