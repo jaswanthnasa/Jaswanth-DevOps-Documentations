@@ -1,4 +1,4 @@
-## Ultimate CI/CD Pipeline for Spring Boot on Kubernetes with Argo CD **[By Abhishek Veeramalla ]**
+## Ultimate CI/CD Pipeline for Spring Boot on Kubernetes with Argo CD 
 
 ### Project Description:
 
