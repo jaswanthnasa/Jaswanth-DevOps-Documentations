@@ -9,7 +9,7 @@
 * [CD setup](#CD-setup)
 
 ## CI setup
-1) Jenkins intallation and login <br>
+1) **Jenkins intallation and login**
 
 ```
 #!/bin/bash
@@ -21,7 +21,7 @@ sudo apt-get update
 sudo apt-get install jenkins -y
 ```
 
-2) Install the Docker Pipeline plugin in Jenkins:
+2) **Install the Docker Pipeline plugin in Jenkins:**
 
    - Log in to Jenkins.
    - Go to Manage Jenkins > Manage Plugins.
@@ -29,7 +29,7 @@ sudo apt-get install jenkins -y
    - Select the plugin and click the Install button.
    - Restart Jenkins after the plugin is installed.
 
-3)  Intall docker on ec2 instance
+3)  **Intall docker on ec2 instance**
   
    ```
    sudo apt update
@@ -43,7 +43,7 @@ sudo apt-get install jenkins -y
   systemctl restart docker
    ```
 
-4) Intall mvn <br><br>
+4) **Intall mvn** <br><br>
  manage jenkins--->tools-->maven <br>
 ![mvn_add](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/d67b8c6a-7993-4056-8cd9-ecf36af574dc)
 
@@ -55,7 +55,7 @@ sudo apt-get install jenkins -y
 
 
 
-7)SonarQube installation
+7) **SonarQube installation**
 ```
 apt install unzip
 adduser sonarqube
@@ -89,7 +89,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 
 ## CD setup
 
-1)Install argocd operator using [https://operatorhub.io/operator/argocd-operator] 
+1) **Install argocd operator using [https://operatorhub.io/operator/argocd-operator]** 
 
 ```
 curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.25.0/install.sh | bash -s v0.25.0
@@ -97,7 +97,7 @@ kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
 kubectl get csv -n operators
 ```
 
-2) then create a file like argo-cd.yaml
+2) **then create a file like argo-cd.yaml**
   ```
   apiVersion: argoproj.io/v1alpha1
   kind: ArgoCD
@@ -108,23 +108,23 @@ kubectl get csv -n operators
   spec: {}
   ```
 
-3) then apply it-------> kubectl apply -f argo-cd.yaml
+3) **then apply it**-------> kubectl apply -f argo-cd.yaml
 
-4) edit service *example-argocd-server*  from cluster ip to nodeport ---------->Type: NodePort <br>
+4) **edit service *example-argocd-server*  from cluster ip to nodeport** ---------->Type: NodePort <br>
   kubectl edit service example-argocd-server
 
-5) minikube service example-argocd-server
+5) **minikube service example-argocd-server**
 
-6) access the url from browser ------->  http://127.0.0.1:51858
+6) **access the url from browser** ------->  http://127.0.0.1:51858
 
-7) kubectl edit secret example-argocd-cluster ------------------> to get the argocd secret
+7) **kubectl edit secret example-argocd-cluster**------------------> to get the argocd secret
 
-8) echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d ---------------------> decoding to get the argocd passsword <br>
+8) **echo REJTeXNYZlVDaXBON3puMkZ3QUVjTFliSDB1ZzRLTzE= | base64 -d** ---------------------> decoding to get the argocd passsword <br>
 
    so arcd creds -----username=admin <br>
                       passowrd=output of the above one
 
-9) create a new app in ARCOCD  ------------> 
+9) **create a new app in ARCOCD**  ------------> 
 
                       **GENERAL**
                       Application name= jaswanth
