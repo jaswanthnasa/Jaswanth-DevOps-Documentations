@@ -1,12 +1,12 @@
 # CICD pipelien for Java Application contains 2 stages
 ## CI 
 GitHUb repo https://github.com/jaswanthnasa/Jaswanth-CICD.git <br>
-[CI setup](##CI-setup)
+* [CI setup](##CI-setup)
 
 
 ## CD 
 GitHUb repo https://github.com/jaswanthnasa/jaswanthnasa_v1.git <br>
-[CD setup](##CD-setup)
+* [CD setup](##CD-setup)
 
 ## CI setup
 1) Jenkins intallation and login <br>
