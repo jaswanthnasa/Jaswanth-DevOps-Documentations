@@ -17,3 +17,7 @@ cat rahul.txt | head -7 | tail -1
 
 > --------------------> to create a new one
 >>--------------------> to append
+
+df --------disk space
+free ------memory
+nproc -----cpu 
