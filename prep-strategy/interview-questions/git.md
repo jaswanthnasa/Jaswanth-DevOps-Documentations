@@ -7,7 +7,14 @@
  c)release  --------- it will be derived from main branch to serve customers <br>
  d)hotfix branch----- any urgent fixes has to be made to the exisitng release branch and merged with main & to that release branch <br>
 
- ![git-branching-strategy](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/6c3fa81e-ccf2-45c7-b39f-84a1adb5bfcc)
+
+ ![](/Jaswanth-DevOps-Documentations/images-used/git-branching-strategy.jpg) 
+ 
+
+
+
+
+
 
 
  
