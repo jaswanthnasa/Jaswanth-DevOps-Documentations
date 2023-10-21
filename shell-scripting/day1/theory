@@ -1,0 +1,8 @@
+#!/bin/bash 
+chmod -----> user   usergroup   everyone
+chmod 444 first.sh -------------> permission denied 
+
+4--read
+2-write
+1-execute
+
