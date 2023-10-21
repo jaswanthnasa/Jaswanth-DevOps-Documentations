@@ -1,6 +1,8 @@
 # CICD pipelien for Java Application contains 2 stages
 ## CI 
-https://github.com/jaswanthnasa/Jaswanth-CICD.git
+GitHUb repo https://github.com/jaswanthnasa/Jaswanth-CICD.git <br>
+Implementation steps: https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/blob/master/pipeline-references/advanced/cicd.md#ci-setup
+
 ## CD 
 https://github.com/jaswanthnasa/jaswanthnasa_v1.git
 
