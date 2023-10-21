@@ -1,6 +1,8 @@
-Clearing cache and Buffer scripts:
-==================================
+## Shell-scripts realtime usecases
 
+1. Clearing cache and Buffer scripts:
+
+```
 #bin/bash
 
 # script for clearing cache and swap memory when it reaches 90%
@@ -16,51 +18,24 @@ echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a && printf '\n%s\n' 
 else
 echo "No Need to clear cache right now"
 fi
-
+```
 
 how to place script
 
-
+```
 First copy the script path
 /home/scripts/clearcache.sh
 sudo su
 crontab -e
 * * * * * 
-
-
-**********************************************************************************************************
-
-
-JAVA SERVICES UP & DOWN
-
-
-1]  service 
-Port No: 8090  
-sudo ss -lptn 'sport = :8090' | tail -n1
-nohup java -jar target/service.jar & 
-
-
-check servivces.sh
-sudo ss -lptn 'sport = :8090' | tail -n1
-sudo ss -lptn 'sport = :8091' | tail -n1
-sudo ss -lptn 'sport = :8092' | tail -n1
-sudo ss -lptn 'sport = :8093' | tail -n1
-sudo ss -lptn 'sport = :8094' | tail -n1
-
-
-sudo kill -9 pid
-
-start java servivces
-#2servicename-9090
-cd /home/sandeep/services/Reports
-nohup java -jar target/service.jar &
-
-***************************************************************
-
-Scripts to check always make java services up:
+```
 
 
 
+
+2. Scripts to check always make java services up:
+
+```
 #!/bin/bash
 
 timestamp=`date +"%Y-%m-%d %H:%M:%S"`
@@ -75,13 +50,14 @@ nohup java -jar target/service.jar &
 echo " $timestamp Restarted successfully" >> /home/service/reporting_log.txt
 echo " Services" |mutt -s "Buzz Reporting Restarted $timestamp " -- sandeep@acure.com 
 fi
+```
 
 
-*********************************************************************************************************
-
-Mysql backups:
 
 
+3. Mysql backups:
+
+```-
 YEAR=`date +%Y`
 MONTH=`date +%m`
 DAY=`date +%d`
@@ -105,4 +81,6 @@ sudo mkdir -p $YEAR/$MONTH/$DAY/$HOUR
 
 mysqldump -uroot -proot control > $YEAR/$MONTH/$DAY/$HOUR/control.sql --set-gtid-purged=OFF
 mysqldump -uroot -proot fundstransfer > $YEAR/$MONTH/$DAY/$HOUR/fundstransfer.sql --set-gtid-purged=OFF
+
+```
 
