@@ -47,10 +47,10 @@ sudo apt-get install jenkins -y
  manage jenkins--->tools-->maven <br>
 ![mvn_add](https://github.com/jaswanthnasa/Jaswanth-DevOps-Documentations/assets/92042814/d67b8c6a-7993-4056-8cd9-ecf36af574dc)
 
-5) create docker hub credesntials  <br>
+5) **create docker hub credesntials**  <br>
  manage jenkins--->credentials-->Add Credentials
 
-6) create github creds <br>
+6) **create github creds** <br>
  manage jenkins--->credentials-->Add Credentials
 
 
