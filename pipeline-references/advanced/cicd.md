@@ -6,7 +6,7 @@ GitHUb repo https://github.com/jaswanthnasa/Jaswanth-CICD.git <br>
 
 ## CD 
 GitHUb repo https://github.com/jaswanthnasa/jaswanthnasa_v1.git <br>
-[CI setup](##CD-setup)
+[CD setup](##CD-setup)
 
 ## CI setup
 1) Jenkins intallation and login <br>
