@@ -1,12 +1,18 @@
+1) install choco---------> open powershell [run as administrator]----->
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+2)choco install kubernetes-helm -----------> to install helm
+
+
+3) prometheus
+
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo update
 helm install prometheus prometheus-community/prometheus
 kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
 
 
-
-
-
+4) grafana
 
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
