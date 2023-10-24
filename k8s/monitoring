@@ -11,6 +11,8 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 helm install prometheus prometheus-community/prometheus
 kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+minikube service prometheus-server-ext
+
 
 
 4) to install grafana----------------->
@@ -19,6 +21,7 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 helm install grafana grafana/grafana
 kubectl expose service grafana --type=NodePort --target-port=3000 --name=grafana-ext
+minikube service grafana-ext
 
 to login to grafana use below--------->
 user name= admin
