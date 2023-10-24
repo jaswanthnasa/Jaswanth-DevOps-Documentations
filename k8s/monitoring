@@ -25,6 +25,6 @@ minikube service grafana-ext
 
 to login to grafana use below--------->
 user name= admin
-kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo------------- > to get password
+kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo  //  to get password
 
 dashboard-id=3662
