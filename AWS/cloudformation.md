@@ -102,4 +102,41 @@ Outputs:
     Description: Ec2-Instance Created using this template.
     Value: !Ref Myfirstec2instacefromcloudformation  
 ```
+
+## 5) SG with inbound and outbound
+```
+Resources:
+
+  TestSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for to test drift
+      GroupName: Test_SG_15
+      VpcId: vpc-28382772d13508ae67
+      Tags:
+        - Key: AppName
+          Value: Test_SG_15
+  
+  TestSecurityGroupOpenEgress:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      Description: Allow open egress from MSK Cluster
+      GroupId: !Ref TestSecurityGroup
+      CidrIp: 0.0.0.0/0
+      IpProtocol: '-1'
+      FromPort: -1
+      ToPort: -1
+
+ # MSK Brokers Security Group Ingress EKS
+ 
+  Testingress:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      Description: Allows access 
+      GroupId: !Ref TestSecurityGroup
+      CidrIp: 100.10.10.0/16
+      IpProtocol: 'tcp'
+      FromPort: 9094
+      ToPort: 9094
+```
      
