@@ -24,3 +24,21 @@ aws ec2 describe-instances --filters "Name=instance-state-name,Values=terminated
 =======================================================
 
 
+================================ ADDING INBOUND RULE TO THE SG=========================================
+without description -----
+aws ec2 authorize-security-group-ingress \
+    --group-id sg-0228783abdjhd \
+    --protocol tcp \
+    --port 8080 \
+    --cidr 10.10.10.0/18
+
+
+with description --------
+
+aws ec2 authorize-security-group-ingress \
+    --group-id sg-0228783abdjhd \
+    --ip-permissions IpProtocol=tcp,FromPort=8080,ToPort=8080,IpRanges="[{CidrIp=10.10.64.0/22,Description='to  ACCESS from cidr '}]"
+==================================================================================================
+
+
+
