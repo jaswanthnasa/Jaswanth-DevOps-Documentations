@@ -73,6 +73,8 @@ docker exec -it continer-id /bin/bash=========================> to get inside of
 
 docker run --rm <img_path> apt list --installed | grep <package_name>  ==============> command to check the version of <package> inside container
 
+[[ The --rm flag is there to tell the Docker Daemon to clean up the container and remove the file system after the container exits.
+This helps you save disk space after running short-lived containers ]]
 
 
 
