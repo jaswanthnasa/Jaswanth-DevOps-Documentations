@@ -71,6 +71,9 @@ docker rm -f conteriner-id================> to remove a running container focely
 
 docker exec -it continer-id /bin/bash=========================> to get inside of a container
 
+docker run --rm <img_path> apt list --installed | grep <package_name>  ==============> command to check the version of <package> inside container
+
+
 
 
 
