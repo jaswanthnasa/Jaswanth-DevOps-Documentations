@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=8gfSS-ZIulQ&t=1s
   ]
 }
 
-2) creaate a IAM role and attach the policy above
+2) creaate a IAM role for lambda and attach the policy above
 
 3) create lambda function
 // using python code 
