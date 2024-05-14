@@ -1,5 +1,10 @@
 ======================================================================================
 ==================================================================================
+To start and stop EC2 Instances uisng lambda & cloudwatch events ........ref video 
+https://www.youtube.com/watch?v=8gfSS-ZIulQ&t=1s
+==================================================================================
+
+1)IAM policy to start/stop ec2 instance , to be associate with lambda function
 
 {
   "Version": "2012-10-17",
@@ -24,6 +29,9 @@
   ]
 }
 
+2) creaate a IAM role and attach the policy above
+
+3) create lambda function
 // using python code 
 // Stops the EC2 instances
 import boto3
