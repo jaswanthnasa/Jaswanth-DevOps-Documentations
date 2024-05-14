@@ -1,0 +1,82 @@
+======================================================================================
+==================================================================================
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:Start*",
+        "ec2:Stop*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+// using python code 
+// Stops the EC2 instances
+import boto3
+region = 'ap-south-1'
+instances = ['i-12345', 'i-2345']
+ec2 = boto3.client('ec2', region_name=region)
+
+def lambda_handler(event, context):
+    ec2.stop_instances(InstanceIds=instances)
+    print('stopped your instances: ' + str(instances))
+
+// Starts the EC2 instances
+ 
+import boto3
+region = 'ap-south-1'
+instances = ['i-12345', 'i-2345']
+ec2 = boto3.client('ec2', region_name=region)
+
+def lambda_handler(event, context):
+    ec2.start_instances(InstanceIds=instances)
+    print('started your instances: ' + str(instances))
+
+
+================================================================================
+================================================================================
+================================================================================
+
+
+// Demonstration video can be found at: https://youtu.be/roAerKVfq-Y
+
+// StopEC2Instance
+
+//start-stop-ec2-instances.js
+
+const AWS = require('aws-sdk');
+
+exports.handler = (event, context, callback) => {
+    const ec2 = new AWS.EC2({ region: event.instanceRegion });
+    
+    ec2.stopInstances({ InstanceIds: [event.instanceId] }).promise()
+        .then(() => callback(null, `Successfully stopped ${event.instanceId}`))
+        .catch(err => callback(err));
+};
+
+// StartEC2Instance
+
+const AWS = require('aws-sdk');
+
+exports.handler = (event, context, callback) => {
+    const ec2 = new AWS.EC2({ region: event.instanceRegion });
+    
+    ec2.startInstances({ InstanceIds: [event.instanceId] }).promise()
+        .then(() => callback(null, `Successfully started ${event.instanceId}`))
+        .catch(err => callback(err));
+};
+
