@@ -1,0 +1,9 @@
+=====================
+## install httpd on ec2 instance using ssmm 
+
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "This is to Test SSM agent demo lab" >> /var/www/html/index.html
+===================
