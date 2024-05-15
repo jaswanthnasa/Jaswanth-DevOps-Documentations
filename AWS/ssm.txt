@@ -1,4 +1,8 @@
 =====================
+
+1) create a IAM role with "AmazonSSMFullAccess" policy
+2) create EC2 instance with amazon linux AMI and attach the IAM role
+3) systems manager--> Run command --> ececute the below script 
 ## install httpd on ec2 instance using ssmm 
 
 #!/bin/bash
@@ -7,3 +11,4 @@ service httpd start
 chkconfig httpd on
 echo "This is to Test SSM agent demo lab" >> /var/www/html/index.html
 ===================
+4) grab the public ip and get the required output. so in this way we can able to connect and install the required scritps using ssm without login to istance
