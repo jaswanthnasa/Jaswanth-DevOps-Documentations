@@ -44,3 +44,36 @@
         }
     ]
 }
+
+===============================
+=====================================
+3) enable s3 notofocations to SNS topic
+add below in sns topic's  access policy
+
+ref : https://docs.aws.amazon.com/AmazonS3/latest/userguide/ways-to-add-notification-config-to-bucket.html#step1-create-sns-topic-for-notification
+
+-
+{
+  "Version": "2012-10-17",
+  "Id": "example-ID",
+  "Statement": [
+    {
+      "Sid": "Example SNS topic policy",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "arn:aws:sns:ap-south-1:619399272393:demo-topic",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "619399272393"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:::boombda-1234"
+        }
+      }
+    }
+  ]
+-
+}
