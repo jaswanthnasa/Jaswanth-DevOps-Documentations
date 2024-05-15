@@ -1,4 +1,6 @@
 =====================
+ref video -- 
+https://www.youtube.com/watch?v=wBPtDktgPEA&t=297s
 
 1) create a IAM role with "AmazonSSMFullAccess" policy
 2) create EC2 instance with amazon linux AMI and attach the IAM role
