@@ -86,9 +86,52 @@ exports.handler = (event, context, callback) => {
     ec2.startInstances({ InstanceIds: [event.instanceId] }).promise()
         .then(() => callback(null, `Successfully started ${event.instanceId}`))
         .catch(err => callback(err));
+};
 
 ==================================================================
 ==================================================================
 https://vinodhakumara2681997.medium.com/using-python-boto3-and-lambda-functions-to-start-stop-ec2-instances-based-on-tags-feb2c4829192
-};
+
+--
+import json
+import boto3
+
+ec2 = boto3.resource('ec2', region_name='ap-south-1')
+def lambda_handler(event, context):
+    # instances = ec2.instances.filter(Filters=[{'Name': 'instance-state-name', 'Values': ['stopped']},{'Name': 'tag:ec2-1','Values':['Yes']}])
+   instances = ec2.instances.filter(Filters=[{'Name': 'instance-state-name', 'Values': ['stopped']},{'Name': 'tag:env','Values':['test']}])
+   for instance in instances:
+       id=instance.id
+       ec2.instances.filter(InstanceIds=[id]).start()
+       print("Instance ID is stopped:- "+instance.id)
+   return "success"
+--
+
+---
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:StartInstances",
+                "ec2:DescribeTags",
+                "logs:*",
+                "ec2:DescribeInstanceTypes",
+                "ec2:StopInstances",
+                "ec2:DescribeInstanceStatus"
+            ],
+            "Resource": "arn:aws:ec2:<region>:<accountID>:instance/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/auto-start-stop": "Yes"
+                }
+            }
+        }
+    ]
+}
+---
+
 
