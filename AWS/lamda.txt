@@ -86,5 +86,9 @@ exports.handler = (event, context, callback) => {
     ec2.startInstances({ InstanceIds: [event.instanceId] }).promise()
         .then(() => callback(null, `Successfully started ${event.instanceId}`))
         .catch(err => callback(err));
+
+==================================================================
+==================================================================
+https://vinodhakumara2681997.medium.com/using-python-boto3-and-lambda-functions-to-start-stop-ec2-instances-based-on-tags-feb2c4829192
 };
 
