@@ -1,0 +1,10 @@
+1)  offset reset
+  bash kafka-consumer-groups.sh \
+    --topic $TOPIC_NAME \
+    --reset-offsets \
+    --to-latest \
+    --group $GROUP_NAME \
+    --bootstrap-server $BOOTSTRAP_SERVER \
+    --execute \
+    --command-config client.properties
+  
