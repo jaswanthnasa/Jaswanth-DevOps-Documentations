@@ -1,4 +1,4 @@
-1)  offset reset
+1) ## offset reset ##
   bash kafka-consumer-groups.sh \
     --topic $TOPIC_NAME \
     --reset-offsets \
