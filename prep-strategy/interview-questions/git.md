@@ -15,6 +15,9 @@ if you want your commits in linear fashion then go with rebase or else merge wou
 **linear way** --->rebase <br>
 **non linear way** ---> merge
 
+3. git reset --hard commit-id
+
+
 
 
 
