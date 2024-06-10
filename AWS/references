@@ -3,3 +3,5 @@ https://aws.amazon.com/getting-started/hands-on
 pyton3 -m http.server 8000
 
 aws cloudformation continue-update-rollback --stack-name harness-cpn-seats-eks-cluster --resources-to-skip EKSAddonCoreDNS --region us-east-1
+
+https://gist.github.com/mda590/679aba60ca03699d5b12a32314debdc0  //boto3 example
