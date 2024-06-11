@@ -16,3 +16,6 @@
 
 8) list of some 𝗥𝗲𝘀𝘂𝗺𝗲-𝗥𝗲𝗮𝗱𝘆 DevOps projects.<br>
  https://www.linkedin.com/posts/rajani103_connections-aws-awscommunity-activity-7195792096904032259-h3uL?utm_source=share&utm_medium=member_desktop
+
+9) Useful **DevOps Interview questions** <br>
+    https://www.linkedin.com/posts/sandip-das-developer_devops-interview-questions-activity-7206304707701608449-GPKm?utm_source=share&utm_medium=member_desktop
