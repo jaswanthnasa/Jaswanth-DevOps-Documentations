@@ -4,4 +4,6 @@ pyton3 -m http.server 8000
 
 aws cloudformation continue-update-rollback --stack-name stack-name --resources-to-skip EKSAddonCoreDNS --region us-east-1
 
+aws autoscaling start-instance-refresh --profile $PROFILE --region us-east-1 --auto-scaling-group-name <enter-asg-name> --preferences '{"InstanceWarmup": 60, "MinHealthyPercentage": 50}'
+
 https://gist.github.com/mda590/679aba60ca03699d5b12a32314debdc0  //boto3 example
