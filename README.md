@@ -19,3 +19,6 @@
 
 9) Useful **DevOps Interview questions** <br>
     https://www.linkedin.com/posts/sandip-das-developer_devops-interview-questions-activity-7206304707701608449-GPKm?utm_source=share&utm_medium=member_desktop
+
+10) 🚀 End-to-End GitOps Project Using AWS EKS & ArgoCD 🌐 <br>
+   https://www.linkedin.com/posts/prasad-suman-mohan_end-to-end-gitops-project-using-aws-eks-ugcPost-7223528685067223040-wys8?utm_source=share&utm_medium=member_desktop
