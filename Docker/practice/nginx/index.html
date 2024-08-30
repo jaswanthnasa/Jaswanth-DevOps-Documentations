@@ -3,10 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Web Application</title>
+    <title>Login - Beautiful App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 28px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus {
+            border-color: #0072ff;
+            outline: none;
+        }
+        .form-group input[type="submit"] {
+            background-color: #0072ff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0.75rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+        .error {
+            color: #d9534f;
+            font-size: 12px;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 600px) {
+            .login-container {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Sample Web Application</h1>
-    <p>This is a simple page served by Nginx in a Docker container.</p>
+    <div class="login-container">
+        <h1>Login to Your Account</h1>
+        <form id="loginForm" action="/login" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            let valid = true;
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+            
+            // Clear previous errors
+            usernameError.textContent = '';
+            passwordError.textContent = '';
+
+            // Basic validation
+            if (username.value.trim() === '') {
+                usernameError.textContent = 'Username is required';
+                valid = false;
+            }
+            if (password.value.trim() === '') {
+                passwordError.textContent = 'Password is required';
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        });
+    </script>
 </body>
 </html>
