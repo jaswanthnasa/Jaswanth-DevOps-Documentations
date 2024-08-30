@@ -3,125 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Beautiful App</title>
+    <title>Complex Website</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #00c6ff, #0072ff);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             margin: 0;
-        }
-        .login-container {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        h1 {
-            margin-bottom: 1.5rem;
-            font-size: 28px;
+            padding: 0;
+            box-sizing: border-box;
             color: #333;
         }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 14px;
-            color: #555;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-        .form-group input:focus {
-            border-color: #0072ff;
-            outline: none;
-        }
-        .form-group input[type="submit"] {
-            background-color: #0072ff;
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem 2rem;
             color: #fff;
-            border: none;
-            cursor: pointer;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
             font-size: 16px;
-            padding: 0.75rem;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            display: flex;
+        }
+        .navbar .menu a {
+            margin: 0;
+        }
+        .navbar .toggle {
+            display: none;
+        }
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 1rem 0;
+        }
+        .hero button {
+            padding: 1rem 2rem;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
-        .form-group input[type="submit"]:hover {
-            background-color: #005bb5;
+        .hero button:hover {
+            background-color: #0056b3;
         }
-        .error {
-            color: #d9534f;
-            font-size: 12px;
-            margin-top: 0.5rem;
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
         }
-        @media (max-width: 600px) {
-            .login-container {
-                padding: 1rem;
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            font-size: 32px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+            }
+            .navbar .toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            .navbar.active .menu {
+                display: flex;
             }
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login to Your Account</h1>
-        <form id="loginForm" action="/login" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-                <div class="error" id="usernameError"></div>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <div class="error" id="passwordError"></div>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <div class="logo">MyWebsite</div>
+        <div class="toggle" id="toggle">&#9776;</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h1>Welcome to My Website</h1>
+        <p>We provide the best solutions for your needs.</p>
+        <button onclick="scrollToSection('contact')">Contact Us</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="section" id="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id interdum quam. Nullam ut dapibus est.</p>
+        </div>
+        <div class="section" id="services">
+            <h2>Our Services</h2>
+            <p>Phasellus ultrices, augue ac scelerisque ultricies, lorem lacus fermentum elit, vitae ultrices felis ex sit amet sapien.</p>
+        </div>
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Curabitur gravida erat eu elit efficitur, id faucibus turpis gravida. Integer a urna eget metus varius.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        <p><a href="#home">Back to top</a></p>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            let valid = true;
-            const username = document.getElementById('username');
-            const password = document.getElementById('password');
-            const usernameError = document.getElementById('usernameError');
-            const passwordError = document.getElementById('passwordError');
-            
-            // Clear previous errors
-            usernameError.textContent = '';
-            passwordError.textContent = '';
-
-            // Basic validation
-            if (username.value.trim() === '') {
-                usernameError.textContent = 'Username is required';
-                valid = false;
-            }
-            if (password.value.trim() === '') {
-                passwordError.textContent = 'Password is required';
-                valid = false;
-            }
-
-            if (!valid) {
-                event.preventDefault(); // Prevent form submission if validation fails
-            }
+        // Toggle Navigation Menu for Mobile
+        document.getElementById('toggle').addEventListener('click', function() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
         });
+
+        // Smooth Scrolling to Section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
