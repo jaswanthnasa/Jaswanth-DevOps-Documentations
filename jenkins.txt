@@ -147,6 +147,19 @@ sudo mkdir slave1-job
 sudo chmod 777 -R slave-jobs/
 
 
+========================================================================
+=======================================================================
+Jenkins using docker images
+****************************
+docker run -d --name jenkins-container -p 8080:8080 jenkins/jenkins
+docker exec -it jenkins-container /bin/bash
+cat /var/jenkins_home/secrets/initialAdminPassword
+========================================================================
+=======================================================================
+
+
+
+
 
 
 
