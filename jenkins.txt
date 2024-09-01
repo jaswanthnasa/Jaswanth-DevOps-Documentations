@@ -147,16 +147,43 @@ sudo mkdir slave1-job
 sudo chmod 777 -R slave-jobs/
 
 
-========================================================================
-=======================================================================
+======================================================================
+======================================================================
 Jenkins using docker images
 ****************************
 docker run -d --name jenkins-container -p 8080:8080 jenkins/jenkins
 docker exec -it jenkins-container /bin/bash
 cat /var/jenkins_home/secrets/initialAdminPassword
-========================================================================
-=======================================================================
+=====================================================================
+=====================================================================
 
+======================================================================================================
+Docker file
+======================================================================================================
+FROM jenkins/jenkins:lts
+
+# Install Docker CLI
+USER root
+RUN apt-get update && apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common \
+    lsb-release \
+    && curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - \
+    && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" \
+    && apt-get update \
+    && apt-get install -y docker-ce-cli \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Use the Docker daemon from Docker-in-Docker
+ENV DOCKER_TLS_CERTDIR=/certs
+=============================================================
+docker build -t jenkins-with-docker .
+docker run -d --name jenkins-dind2 -v /var/run/docker.sock:/var/run/docker.sock --privileged -p 8080:8080 -p 50000:50000 jenkins-with-docker
+=============================================================================================================================================
 
 
 
