@@ -4,7 +4,9 @@ Volumes aims to solve the same problem by providing a way to store data on the h
 
 2. docker volume ls
 
-3. docker run -it -d --name demo-volume-container -v jas-vol:/app nginx /bin/bash
+3. docker inspect jas-vol
+
+4. docker run -it -d --name demo-volume-container -v jas-vol:/app nginx /bin/bash
 
 ```
 docker exec -it demo-volume-container /bin/bash
