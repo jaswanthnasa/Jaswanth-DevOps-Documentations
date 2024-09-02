@@ -45,4 +45,4 @@ apt-get install -y iputils-ping
 3. ping 172.17.0.3
 
 ## ping from login container  to finance container
-ping 172.18.0.2  
+ping 172.18.0.2  # this will fail to connect as finace container connects host though different/custom bridge network
