@@ -1,6 +1,6 @@
 Volumes aims to solve the same problem by providing a way to store data on the host file system, separate from the container's file system, so that the data can persist even if the container is deleted and recreated.
 
-1. docker create volume jas-vol
+1. docker volume create jas-vol
 
 2. docker volume ls
 
