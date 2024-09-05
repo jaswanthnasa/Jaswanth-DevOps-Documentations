@@ -22,7 +22,7 @@ dockeer start <continer-name>=========>  to start docker container <br>
 dockeer restart <continer-name>=========>  to restart  docker container <br>
 docker rm <container-name> ==========> to remove container <br>
 docker logs <container-id> ============> to check logs of a container
-docker inspect =<container-id> =========> to inspect container to get all detaied info
+docker inspect <container-id> =========> to inspect container to get all detaied info
 
 ===================================
 How to tag docker images and push to docker hub:
