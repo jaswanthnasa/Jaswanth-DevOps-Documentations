@@ -1,0 +1,12 @@
+A multi-stage Dockerfile is a way to optimize Docker images by using multiple stages in the build process. Each stage can use a different base image and only the final stage produces the final image. This approach helps in minimizing the final image size and improving build efficiency by separating the build environment from the runtime environment.
+
+Basic Structure
+Build Stage(s): These stages are responsible for building the application. They often use large images with build tools and dependencies.
+
+Final Stage: This stage creates the minimal final image. It copies only the necessary artifacts from the build stages.
+
+Benefits
+Reduced Image Size: By excluding build tools and intermediate files, the final image is smaller and more efficient.
+Improved Security: Reduces the attack surface by not including build tools and other development dependencies in the final image.
+Faster Builds: Builds can be faster and more reliable by isolating different parts of the build process.
+Multi-stage builds are highly customizable, so you can adapt this approach to various programming languages, frameworks, and application requirements.
