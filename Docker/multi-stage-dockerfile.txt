@@ -24,4 +24,7 @@ Multi-stage builds are highly customizable, so you can adapt this approach to va
 If you get an interview question
 Rahul tell me something you have done innovatively in your organizstion that has helped customer or business with results?
 You should answer as below
-I have identified a problem statement in our devops where containers management became complex and resourse intensive leading to many recurring issues, I took up the challenge and assessed the problem and discovered docker containers are packaged as big size if we modularize it to multiple layers the maintenance was made simple which helped sort out many issues. I did POC and showed results which has been accepted by my Techlead and this adoption was implemented and improved devops quality
+I have identified a problem statement in our devops where containers management became complex and resourse intensive leading to many recurring issues, 
+I took up the challenge and assessed the problem and discovered docker containers are packaged as big size,
+if we modularize it to multiple layers the maintenance was made simple which helped sort out many issues. 
+I did POC and showed results which has been accepted by my Techlead and this adoption was implemented and improved devops quality
