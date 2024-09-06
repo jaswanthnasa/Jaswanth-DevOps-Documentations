@@ -6,7 +6,8 @@ Basic Structure:
 ===============
 
 1)Build Stage(s): These stages are responsible for building the application. They often use large images with build tools and dependencies.
-2)Final Stage: This stage creates the minimal final image. It copies only the necessary artifacts from the build stages.
+2)Final Stage: This stage creates the minimal final image. It copies only the necessary artifacts from the build stages. [example COPY --from=build ]
+
 
 Benefits:
 ========
