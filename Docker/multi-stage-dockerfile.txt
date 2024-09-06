@@ -22,7 +22,7 @@ Multi-stage builds are highly customizable, so you can adapt this approach to va
 ================================================================================
 
 If you get an interview question
-Rahul tell me something you have done innovatively in your organizstion that has helped customer or business with results?
+ Tell me something you have done innovatively in your organization that has helped customer or business with results?
 You should answer as below
 I have identified a problem statement in our devops where containers management became complex and resourse intensive leading to many recurring issues, 
 I took up the challenge and assessed the problem and discovered docker containers are packaged as big size,
