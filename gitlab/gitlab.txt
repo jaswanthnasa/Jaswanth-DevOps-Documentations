@@ -11,6 +11,8 @@ Pipelines comprise:
 1)Jobs------------->which define what to do. For example, jobs that compile or test code.
 2)Stages-----------> which define when to run the jobs. For example, stages that run tests after stages that compile the code.
 
+job artifacts---------->used to transfer artifacts from one job to another job
+
 ##########################
 
 1) launch ec2 instance---->ubuntu, t2.medium , sonar [9000] , http [80] , https [443] 
