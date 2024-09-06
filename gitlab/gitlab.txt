@@ -7,6 +7,11 @@ Users are allowed to set up their own GitLab runners.
    a)shared  [public, owned by gitlab],
    b)project [more secure, requires addtional config]
 
+Pipelines comprise:
+1)Jobs------------->which define what to do. For example, jobs that compile or test code.
+2)Stages-----------> which define when to run the jobs. For example, stages that run tests after stages that compile the code.
+
+##########################
 
 1) launch ec2 instance---->ubuntu, t2.medium , sonar [9000] , http [80] , https [443] 
 2) connecct to instance 
