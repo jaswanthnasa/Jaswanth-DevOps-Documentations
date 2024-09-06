@@ -1,0 +1,61 @@
+runners in gitlab ----------> 
+Runners are machines/applications that run CI/CD pipelines.
+GitLab has several runners configured. 
+Every user can access these runners on gitlab.com. 
+Users are allowed to set up their own GitLab runners.
+  settings--->cicd--->runners
+   a)shared  [public, owned by gitlab],
+   b)project [more secure, requires addtional config]
+
+
+1) launch ec2 instance---->ubuntu, t2.medium , sonar [9000] , http [80] , https [443] 
+2) connecct to instance 
+sudo apt update
+
+## installing docker
+sudo apt install docker.io -y
+
+## installing java
+sudo apt install openjdk-11-jre -y
+java -version
+
+###installing sonar  [java is pre-requisite to sonar- wihtout java installation somar ]
+sudo su
+apt install unzip
+adduser sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
+
+## accessing sonar 
+<public-ip>:9000
+username:admin
+password:admin
+Myaccount-->security-->generate token  [to autenticate with gitlab]
+
+Jenkins --------> Jenkisfile
+Githubactions--->.workflow
+gitlab---------->.gitlab-ci.yaml
+
+
+##storing sensitive info in gitllab
+settings--->cicd-->variables--->add variable
+
+
+######installing and running gitlab runner in linux ##########33
+
+# Download the binary for your system
+sudo curl -L --output /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+
+# Give it permission to execute
+sudo chmod +x /usr/local/bin/gitlab-runner
+
+# Create a GitLab Runner user
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+
+# Install and run as a service
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner start
