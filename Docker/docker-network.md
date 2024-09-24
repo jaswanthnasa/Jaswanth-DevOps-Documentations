@@ -16,6 +16,7 @@ bridge network is a default networking in docker
 ```
 
 ![Capture](https://github.com/user-attachments/assets/d308312e-bc80-48f6-8dc3-19207a5deebf)
+![Capture](https://github.com/user-attachments/assets/e2e4dbb1-5b5b-49d5-8e37-f0ea966b8be1)
 1) login
 ```   
 docker run -d --name login nginx
