@@ -14,3 +14,5 @@ https://github.com/docker/awesome-compose
 
 https://github.com/iam-veeramalla/three-tier-architecture-demo
 
+
+* docker compose mainly used for local development by developers
