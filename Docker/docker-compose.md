@@ -7,3 +7,5 @@ Docker Compose is a tool that allows you to define and run **multi-container Doc
 
 
 To get started, you typically create a `docker-compose.yml` file and then use commands like `docker-compose up` to launch your application or `docker-compose down` to stop and remove it. It's a powerful way to streamline development and deployment workflows!
+
+https://github.com/docker/awesome-compose ========> to practice
