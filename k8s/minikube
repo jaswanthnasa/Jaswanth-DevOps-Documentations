@@ -37,6 +37,8 @@ curl 10.244.0.127
 
 create a folder --example mk and create file pod-service.yaml
 
+kubectl config set-context --current --namespace=<namespace-name> =================> to switch to required namespace
+
 =================
 apiVersion: v1
 kind: Pod
