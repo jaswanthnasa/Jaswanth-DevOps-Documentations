@@ -12,6 +12,21 @@ kubectl get no
 
 kubectl delete all --all -------------> to delete all the resources in k8s cluster
 
+
+Creaer a file ---pod.yaml
+====================
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+==========================
+
 kubectl apply -f pod.yaml -n rahul-devops
 kubectl get po -n rahul-devops -o wide
 to get inside of minikube node-------> minikube ssh
