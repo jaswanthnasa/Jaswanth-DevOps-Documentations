@@ -1,0 +1,3 @@
+kubectl api-resources
+kubectl explain pods
+kubectl config set-context --current --namespace=<namespace-name> =================> to switch to required namespace
