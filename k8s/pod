@@ -11,3 +11,8 @@ spec:
     ports:
       - containerPort: 80
         name: http-web-svc
+====================================================
+
+kubectl api-resources
+kubectl explain pods
+kubectl config set-context --current --namespace=<namespace-name>
