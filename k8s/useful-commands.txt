@@ -3,3 +3,4 @@ kubectl explain pods
 kubectl config set-context --current --namespace=<namespace-name> =================> to switch to required namespace
 kubectl get po -o wide ==========> to open in wide mode
 kubectl get po -w ===============> to open in watch mode
+kubectl describe pod <pod-name> ========================> to dscribe a po 
