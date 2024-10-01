@@ -1,0 +1,44 @@
+
+Helm is a powerful package manager for Kubernetes that simplifies the deployment and management of applications on Kubernetes clusters. 
+It uses a concept called "charts," which are pre-configured templates for Kubernetes resources. 
+
+Ubuntu--->apt
+k8s----->helm
+
+
+1)Chart----------->docker image
+Chart is a Helm package. It contains all of the resource definitions necessary to run an application, tool, or service inside of a Kubernetes cluster.
+
+
+2)Repository------>docker hub
+Repository is the place where charts can be collected and shared. 
+
+
+3)Release--------->docker container  
+Release is an instance of a chart running in a Kubernetes cluster. 
+One chart can often be installed many times into the same cluster. 
+And each time it is installed, a new release is created.
+
+
+https://helm.sh/docs/intro/using_helm/
+refer section : **Helm installs resources in the following order** 
+
+
+1)helm create <chart-name> --------------> to create a new chart with the <chart-name>
+
+<chart-name>/
+├── .helmignore   # Contains patterns to ignore when packaging Helm charts.
+├── Chart.yaml    # Information about your chart [Metadata]
+├── values.yaml   # The default values for your templates
+├── charts/       # Charts that this chart depends on
+└── templates/    # The template files
+    └── tests/    # The test files
+
+2)helm install <release-name> <chart-name>
+
+3)helm uninstall <release-name>
+
+
+for practice -------> https://github.com/Azure-Samples/helm-charts
+
+Interview Questions------------->https://github.com/bregman-arie/devops-exercises/tree/master/topics/kubernetes#helm
