@@ -1,0 +1,22 @@
+
+RBAC is used to manage access to users/Service Accounts  in a Kubernetes cluster
+
+
+users, service accounts
+
+user management [dev team. qa team]-----> providng roles for each group so that they can haev restricions over the cluster[Admin/devops team have full access]
+service management------> managing the access of the services that are running on cluster 
+
+
+
+SA/USERS
+ROLES/ CLUSTER ROLE [like IAM role in AWS]
+ROLE BINDING / CLUSTER ROLE BINDING [like IAM policies in AWS]
+
+K8s doesn't deal with User management , rather offloading to identity providers [ex: linkden singup/login with google with out registarion]
+
+
+role ----------> to create access to users to access pods,config maps, secrets within NS..for attaching role we use role binding
+cluster role --> to create access to users to access pods,config maps, secrets accross k8s cluster....for attaching role we use cluster role binding
+
+
