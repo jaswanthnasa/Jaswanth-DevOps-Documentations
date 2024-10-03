@@ -1,4 +1,6 @@
-In Kubernetes, a Service Account is an object that provides an identity for processes that run in a Pod. This identity is used to interact with the Kubernetes API and other services. Service Accounts are primarily used to control access to the Kubernetes API and to manage permissions through Role-Based Access Control (RBAC).
+In Kubernetes, a Service Account is an object that provides an identity for processes that run in a Pod. 
+This identity is used to interact with the Kubernetes API and other services.
+Service Accounts are primarily used to control access to the Kubernetes API and to manage permissions through Role-Based Access Control (RBAC).
 
 
 RBAC is used to manage access to users/Service Accounts  in a Kubernetes cluster
