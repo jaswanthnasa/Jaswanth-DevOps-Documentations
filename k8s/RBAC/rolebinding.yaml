@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: role-binding-rahul
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: sa-rahul # "name" is case sensitive
+  apiGroup: ""
+roleRef:
+  kind: Role #this must be Role or ClusterRole
+  name: role-rahul # this must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: ""

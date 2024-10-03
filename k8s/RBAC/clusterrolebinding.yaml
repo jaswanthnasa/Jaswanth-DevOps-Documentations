@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: clusterrole-binding-rahul
+subjects:
+  - kind: ServiceAccount
+    name: sa-rahul  # Replace with your service account name
+    namespace: default    # Replace with the namespace of your service account
+roleRef:
+  kind: ClusterRole
+  name: clusterrole-rahul
+  apiGroup: rbac.authorization.k8s.io
