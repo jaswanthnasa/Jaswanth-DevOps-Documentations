@@ -1,0 +1,27 @@
+Extending k8s capabilities [ex: advanced networking,security, loadbalancing,  gitops principles]
+
+	istio/kong--->adds the capabilites of service mesh capability to k8s
+	argocd---->adds the capabilites of gitops to k8s
+	keycloak--->adds the capabilites of  very tight identity& access manageent [OAUTH, OIDC]
+
+[Native k8s resouces]
+pods, services, deployments, ingress----------> out of the box resoures of k8s
+
+
+
+
+
+allows to extend the capabilities of k8s [extend the API of k8s]----------> adding new API resource to k8s
+to achive we have 3 componetns
+
+1)CRD----------------------------------> Defining new type of API to k8s [ ex: developers at istio/kong write CRD ---->YAML file  ]
+
+deployment.yaml [ resouce ]-------------------------> there is a 'Recouse Definition' for this dpeloyment in k8s which validates the written resouce
+in istio--->virtual service [custom resource]-------> there is a 'Custom Recouse Definition [CRD]' for this custome resource [CR]  which validates the written resouce
+
+2)CR
+3)CUSTOM CONTROLLER------------> it watches for CR [similar to ingress controller which watches for ingress resource]
+
+
+
+https://istio.io/latest/docs/setup/install/helm/
