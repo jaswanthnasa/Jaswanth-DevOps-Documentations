@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: my-container
+    image: nginx:1.14.2
+    env:
+    - name: DB_PORT
+      valueFrom:
+        configMapKeyRef:
+          name: my-config
+          key: DB_PORT
