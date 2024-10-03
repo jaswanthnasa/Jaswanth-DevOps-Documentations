@@ -24,3 +24,11 @@ role ----------> to create access to users to access pods,config maps, secrets w
 cluster role --> to create access to users to access pods,config maps, secrets accross k8s cluster....for attaching cluster role we use cluster role binding
 
 
+# Check to see if service account "foo" of namespace "dev" can list pods in the namespace "prod"
+  # You must be allowed to use impersonation for the global option "--as"
+  kubectl auth can-i list pods --as=system:serviceaccount:dev:foo -n prod 
+
+kubectl auth can-i --as=system:serviceaccount:default:sa-rahul get pods -n default
+kubectl auth can-i --as=system:serviceaccount:default:sa-rahul get pods -n new-namespace
+
+
