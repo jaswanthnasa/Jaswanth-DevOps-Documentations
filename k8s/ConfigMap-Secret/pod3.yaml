@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod3
+spec:
+  containers:
+  - name: my-secure-container
+    image: nginx:1.14.2
+    env:
+    - name: DATABASE_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: my-secret
+          key: password
