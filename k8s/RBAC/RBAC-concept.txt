@@ -21,6 +21,6 @@ K8s doesn't deal with User management , rather offloading to identity providers 
 
 
 role ----------> to create access to users to access pods,config maps, secrets within NS..for attaching role we use role binding
-cluster role --> to create access to users to access pods,config maps, secrets accross k8s cluster....for attaching role we use cluster role binding
+cluster role --> to create access to users to access pods,config maps, secrets accross k8s cluster....for attaching cluster role we use cluster role binding
 
 
