@@ -39,6 +39,14 @@ helm install -f rahul-chart\values.yaml  rahul-chart-release rahul-chart
 
 3)helm uninstall <release-name>
 
+4) helm upgrade -f rahul-chart\values.yaml  rahul-chart-release rahul-chart
+
+5) helm rollback  rahul-chart-release 1
+
+6) helm ls
+
+7) helm history  rahul-chart-release
+
 
 for practice -------> https://github.com/Azure-Samples/helm-charts
 
