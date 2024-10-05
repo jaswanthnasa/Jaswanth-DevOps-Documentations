@@ -35,6 +35,7 @@ refer section : **Helm installs resources in the following order**
     └── tests/    # The test files
 
 2)helm install <release-name> <chart-name>
+helm install -f rahul-chart\values.yaml  rahul-chart-release rahul-chart
 
 3)helm uninstall <release-name>
 
