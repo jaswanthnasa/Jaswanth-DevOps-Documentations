@@ -21,5 +21,19 @@ Monitoring------> metrics + alerts + Dashboards.
     Only one pillar of Observability --metrics   
     its an subset of Observability
 
+====================================
+
+
+Metrics -----------> measurements or data points that tell you what is happening. 
+		    For example, the number of steps you walk each day, your heart rate, or the temperature outside—these are all metrics.
+
+Prometheus is an open-source systems monitoring and alerting
+
+Exporters---> addons/plug-ins in Promotheus using which it collects/pull the metrics
+		ex: NodeExpoter------------------>used to colelct node related metrics
+		    Kube-state-metrics----------->collect metrics from apr-server [to get info of pods,deplpyments,svc.......]
+
+
+competitors to promotheus------->Nagios,InfluxDB,Graphite
 
 
