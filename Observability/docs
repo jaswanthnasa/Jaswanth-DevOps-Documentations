@@ -35,6 +35,8 @@ Exporters---> addons/plug-ins in Promotheus using which it collects/pull the met
 		ex: NodeExpoter------------------>used to colelct node related metrics
 		    Kube-state-metrics----------->collect metrics from apr-server [to get info of pods,deplpyments,svc.......]
 
+Grafana default creds -->admn/prom-operator
+
 
 competitors to promotheus------->Nagios,InfluxDB,Graphite
 
