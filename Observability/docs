@@ -1,1 +1,25 @@
+Obervability --------> internal state of system [app, infra, network]
+
+disk utilization, cpu utilization, memory utilization
+Number of success/failed http requests towards application
+
+3 pillars of Observability
+what--->metrics
+why---->logs
+how---->traces
+
+Metrics---------> Historical data of application [cpu utilization for last 3 months]
+logs------------> some amt of information
+traces----------> extensive amt of information
+
+
+==========================
+Monitoring vs Observability
+==========================
+
+Monitoring------> metrics + alerts + Dashboards.
+    Only one pillar of Observability --metrics   
+    its an subset of Observability
+
+
 
