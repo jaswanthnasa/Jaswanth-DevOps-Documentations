@@ -1,3 +1,5 @@
+
+
 Obervability --------> internal state of system [app, infra, network]
 
 disk utilization, cpu utilization, memory utilization
@@ -37,3 +39,13 @@ Exporters---> addons/plug-ins in Promotheus using which it collects/pull the met
 competitors to promotheus------->Nagios,InfluxDB,Graphite
 
 
+
+
+
+
+
+
+
+
+***************************REFERENCES***********************************
+https://github.com/iam-veeramalla/observability-zero-to-hero
