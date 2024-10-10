@@ -5,3 +5,8 @@
 ☑️𝐁𝐥𝐮𝐞-𝐆𝐫𝐞𝐞𝐧 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭: Maintains two environments and switch traffic between them for seamless updates.
 
 Whether you are looking to ensure 𝐳𝐞𝐫𝐨 𝐝𝐨𝐰𝐧𝐭𝐢𝐦𝐞 or optimize your update process, these strategies will help you achieve your goal.
+
+==================================
+
+☑️Rolling update ---------> ourof the box with k8s
+☑️canary & B-G -----------> wiht the help of ingress -controller we can implament 
