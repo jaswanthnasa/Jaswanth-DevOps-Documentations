@@ -1,0 +1,7 @@
+𝐭𝐡𝐫𝐞𝐞 widely used kubernetes deployment strategies that ensures smooth and efficient updates in production.🔄
+
+☑️𝐑𝐨𝐥𝐥𝐢𝐧𝐠 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭: It gradually replaces old versions with new ones to ensure near zero downtime.
+☑️𝐂𝐚𝐧𝐚𝐫𝐲 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭: This type tests by sending small percentage of traffic to the new version before full rollout.
+☑️𝐁𝐥𝐮𝐞-𝐆𝐫𝐞𝐞𝐧 𝐃𝐞𝐩𝐥𝐨𝐲𝐦𝐞𝐧𝐭: Maintains two environments and switch traffic between them for seamless updates.
+
+Whether you are looking to ensure 𝐳𝐞𝐫𝐨 𝐝𝐨𝐰𝐧𝐭𝐢𝐦𝐞 or optimize your update process, these strategies will help you achieve your goal.

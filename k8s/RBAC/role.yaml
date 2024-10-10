@@ -5,5 +5,5 @@ metadata:
   name: role-rahul
 rules:
 - apiGroups: [""] # "" indicates the core API group
-  resources: ["*"]
+  resources: ["pods"]
   verbs: ["get", "watch", "list"]
