@@ -47,7 +47,7 @@ helm install -f rahul-chart\values.yaml  rahul-chart-release rahul-chart
 
 7) helm history  rahul-chart-release
 
-8) helm ls -A // to get list of charts in all namespaces
+8) helm ls -A // to get list of releases in all namespaces
 
 
 for practice -------> https://github.com/Azure-Samples/helm-charts
