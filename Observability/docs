@@ -1,6 +1,6 @@
 
 
-Obervability --------> internal state of system [app, infra, network]
+💡Obervability --------> internal state of system [app, infra, network]
 
 disk utilization, cpu utilization, memory utilization
 Number of success/failed http requests towards application
