@@ -32,7 +32,7 @@ Metrics -----------> measurements or data points that tell you what is happening
 Prometheus is an open-source systems monitoring and alerting
 
 Exporters---> addons/plug-ins in Promotheus using which it collects/pull the metrics
-		ex: NodeExpoter------------------>used to colelct node related metrics
+		ex: NodeExpoter------------------>used to colelct node related metrics [disk , cpu , memory utilization]
 		    Kube-state-metrics----------->collect metrics from apr-server [to get info of pods,deplpyments,svc.......]
 
 Grafana default creds -->admn/prom-operator
