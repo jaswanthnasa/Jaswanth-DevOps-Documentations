@@ -35,7 +35,7 @@ Exporters---> addons/plug-ins in Promotheus using which it collects/pull/scrape 
 		ex: NodeExpoter------------------>used to colelct node related metrics [disk , cpu , memory utilization]
 		    Kube-state-metrics----------->collect metrics from apr-server [to get info of pods,deplpyments,svc.......]
 
-☑️Promotheus scrapes the information from exporters and stores it in TSDB     [string in periodic basis -- means which will store the metrics at each time stamp ]		
+☑️Promotheus scrapes the information from exporters and stores it in TSDB     [storig metrics in periodic basis -- means which will store the metrics at each time stamp ]		
 
 Grafana default creds -->admn/prom-operator
 
