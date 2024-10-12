@@ -37,7 +37,7 @@ Exporters---> addons/plug-ins in Promotheus using which it collects/pull/scrape 
 
 ☑️Promotheus scrapes the information from exporters and stores it in TSDB     [storig metrics in periodic basis -- means which will store the metrics at each time stamp ]		
 
-Grafana default creds -->admn/prom-operator
+Grafana default creds -->admin/prom-operator
 
 
 competitors to promotheus------->Nagios,InfluxDB,Graphite
