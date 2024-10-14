@@ -48,10 +48,11 @@ minikube ssh
 curl <ip-of-nodeexporter-service>:9100/metrics
 
 
+kube_pod_container_status_restarts_total{namespace="default"}
 
+kubectl run busybox-crash --image=busybox -- /bin/sh -c "exit 1"
 
-
-
+kube_configmap_created{namespace="kube-system"}
 
 
 
