@@ -43,6 +43,11 @@ Grafana default creds -->admin/prom-operator
 competitors to promotheus------->Nagios,InfluxDB,Graphite
 
 
+****to check metrics of Node exporter*********
+minikube ssh
+curl <ip-of-nodeexporter-service>:9100/metrics
+
+
 
 
 
