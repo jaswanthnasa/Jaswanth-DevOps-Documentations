@@ -70,3 +70,4 @@ curl -L -o istio.zip https://github.com/istio/istio/releases/download/1.21.6/ist
 **********references********************
 https://www.youtube.com/watch?v=16fgzklcF7Y
 https://www.youtube.com/watch?v=eSNetKBe7Z8
+https://github.com/iam-veeramalla/istio-guide/tree/main
