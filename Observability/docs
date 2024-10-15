@@ -54,6 +54,17 @@ kubectl run busybox-crash --image=busybox -- /bin/sh -c "exit 1"
 
 kube_configmap_created{namespace="kube-system"}
 
+=================================================================
+☑️Instrumentation refers to the process of adding monitoring capabilities to your applications, systems, or services.
+	application specific metrics----------> Number fo users registered in last 30 days, number of logins per day, no.of http requets to application etc........
+🎯Types of Metrics in Prometheus
+	1)counter ------------------>metric that always increasing [no.of users registered...]
+	2)Gauge -------------------->metrics that have  up/down nature [cpu.memory utilizations..]
+	3)Histogram----------------->record the info in buckets [how many https requets took 5 ms , 10 ms , 15 ms ........]
+	4)Summary------------------->Summary samples observations and provides a total count of observations, their sum, and configurable quantiles(percentiles).
+
+
+
 
 
 
