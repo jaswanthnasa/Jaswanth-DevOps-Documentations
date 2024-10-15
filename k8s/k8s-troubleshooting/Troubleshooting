@@ -1,0 +1,10 @@
+✅ https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+
+1)ImagePullBackOff 
+ErrImagePull -------> ImagePullBackOff
+BackOff delay ------> keep on trying to pull image with  some delay
+
+
+
+
