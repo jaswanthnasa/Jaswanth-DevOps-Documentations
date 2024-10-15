@@ -4,7 +4,15 @@
 1)ImagePullBackOff 
 ErrImagePull -------> ImagePullBackOff
 BackOff delay ------> keep on trying to pull image with  some delay
+2 possible reasons for this error
+    1.wrong/unknow image
+    2.private repository image
 
 
+docker pull nginx:1.14.2
+docker tag nginx:1.14.2 jas09563/nginx-image-demo
+docker push
+make image as private 
 
 
+kubectl create secret docker-registry demo --docker-server=https://index.docker.io/v1/ --docker-username=jas09563 --docker-password=<your-pword> --docker-email=<your-email>
