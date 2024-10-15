@@ -59,7 +59,7 @@ sudo cat /etc/kubernetes/manifests/kube-apiserver.yaml----------> to check what 
 ☑️To download istio[specific version]
 curl -L -o istio.zip https://github.com/istio/istio/releases/download/1.21.6/istio-1.21.6-win-amd64.zip
 
-☑️we have command line utility for istio ---->istioclt
+☑️we have command line utility for istio ---->istioctl
 
 ☑️kubectl get mutatingwebhookconfiguration
 
