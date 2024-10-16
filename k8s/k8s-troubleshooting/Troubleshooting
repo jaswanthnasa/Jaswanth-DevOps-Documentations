@@ -20,3 +20,4 @@ kubectl create secret docker-registry demo --docker-server=https://index.docker.
 ✅ containercreating----->running/error--------->crashed------------->restart
 ✅ Liveness probe will works similar to load balancer where it checks for the health status 
 ✅ periodSeconds---------->it tells how frequently kubelet has to check the health of the pod
+✅ Readiness -------> used to check the pod is ready to receive the traffic or not
