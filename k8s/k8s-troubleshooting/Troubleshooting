@@ -16,3 +16,6 @@ make image as private
 
 
 kubectl create secret docker-registry demo --docker-server=https://index.docker.io/v1/ --docker-username=jas09563 --docker-password=<your-pword> --docker-email=<your-email>
+
+
+✅ Liveness probe will works similar to load balancer where it checks for the health status 
