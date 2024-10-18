@@ -28,3 +28,10 @@ PV reclaim policy:
 	retain---->PV associated to PVC is not automatically deleted or released when PVC is deleted
 	delete---->PV associated to PVC is automatically deleted or released when PVC is deleted
 
+
+
+
+
+
+***************reference*****************
+https://github.com/nextopsvideos/kubernetesyt/tree/main/08_PersistentVolumes
