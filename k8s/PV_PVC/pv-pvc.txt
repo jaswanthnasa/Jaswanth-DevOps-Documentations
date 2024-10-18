@@ -1,0 +1,30 @@
+PVs provide a way to decouple storage from the lifecycle of pods and allow data to persist beyond the lifetime of individual pods.
+PVC used to attach a volume to the pod
+PVs can be provisionaed statially or dynamically.
+	static------>create PV in advance
+	dynamic----->allows PV to create on demand when requested by application 
+		     it is facilitated thoguh STORAGE CLASSES
+
+In Kubernetes, Persistent Volumes (PVs) can be used to provide storage for applications running in a cluster. 
+The access modes of a Persistent Volume define how the volume can be accessed by the pods.
+There are three main access modes:
+1. **ReadWriteOnce (RWO)**: The volume can be mounted as read-write by a single node. This is the most common mode for many applications.
+2. **ReadOnlyMany (ROX)**: The volume can be mounted as read-only by many nodes. This is useful for scenarios where multiple pods need to read the same data but not modify it.
+3. **ReadWriteMany (RWX)**: The volume can be mounted as read-write by many nodes. This is ideal for shared storage scenarios, such as when multiple pods need to write to the same volume.
+When defining a Persistent Volume, you specify the access modes in its specification. Keep in mind that the underlying storage solution must support the desired access modes for your PVs to function correctly.		
+
+
+ReadWriteOnce
+	 the volume can be mounted as read-write by a single node.
+	 ReadWriteOnce access mode still can allow multiple pods to access the volume when the pods are running on the same node. For single pod access, please see ReadWriteOncePod.
+ReadOnlyMany
+	the volume can be mounted as read-only by many nodes.
+ReadWriteMany
+	the volume can be mounted as read-write by many nodes.
+
+
+PV reclaim policy:
+	What happens to associated PV when PVC deleted
+	retain---->PV associated to PVC is not automatically deleted or released when PVC is deleted
+	delete---->PV associated to PVC is automatically deleted or released when PVC is deleted
+
