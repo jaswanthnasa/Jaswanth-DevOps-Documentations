@@ -39,6 +39,10 @@ aws ec2 authorize-security-group-ingress \
     --group-id sg-0228783abdjhd \
     --ip-permissions IpProtocol=tcp,FromPort=8080,ToPort=8080,IpRanges="[{CidrIp=10.10.64.0/22,Description='to  ACCESS from cidr '}]"
 ==================================================================================================
+####to get instance metadata in IMDBV2 
+curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"
+curl -H "X-aws-ec2-metadata-token: curl -H "X-aws-ec2-metadata-token:<TOEKN>" http://169.254.169.254/latest/meta-data/instance-id
+ 
 
 
 
