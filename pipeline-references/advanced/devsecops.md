@@ -1,4 +1,4 @@
-🚀 **Exciting DevSecOps Pipeline using GitHub Actions & Argocd** 🚀<br>
+# 🚀 **Exciting DevSecOps Pipeline using GitHub Actions & Argocd** 🚀<br>
 
  🚀 🚀 Video  🚀 🚀<br>
 https://youtu.be/Ke_Wr5zPE0A?si=EwCIEqHuf78q2iqO
