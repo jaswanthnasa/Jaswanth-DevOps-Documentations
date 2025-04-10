@@ -139,4 +139,9 @@ Resources:
       FromPort: 9094
       ToPort: 9094
 ```
+
+
+### 🔥 CloudFormation Hack: Safe Updates Without Impact! 🔥  Add a dummy resource using AWS::CloudFormation::WaitConditionHandle!
+https://www.linkedin.com/posts/jaswanth-kumar-82442752_aws-cloudformation-devops-activity-7308552346332971008-QG9_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAsY5dwBBjAiLoXax04wIhljWtvaVTgZ2CY
+
      
