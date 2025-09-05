@@ -1,0 +1,11 @@
+
+
+
+Kong Konnect:
+  a SaaS based platform,  provides Kong hosted Control Planes and Data Plane nodes.
+  Dataplane nodes can run either on-premise or cloud-hosted environments, or fully managed by Kong Konnect with Dedicated Cloud Gateways.
+
+Kong Ingress Controller(KIC):
+  It allows you to run Kong Gateway as a Kubernetes Ingress, i.e., accepts traﬃc from outside the Kubernetes platform, and load balances it to services running inside the platform.
+  KIC receives k8s CRD manifests directed to Kong Gateway and translates these into Kong conﬁguration and applies it to Kong Gateway.
+
