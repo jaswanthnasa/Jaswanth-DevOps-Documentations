@@ -1,7 +1,11 @@
 
 
 
-![cloud-security](cloud-security.jpeg)
+![cloud-security](../images/cloud-security.jpeg)
+
+
+
+
 
 
 
