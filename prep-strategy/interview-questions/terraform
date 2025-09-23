@@ -1,6 +1,12 @@
 for_each ---> to create a multiple instances of a resource.
        resource "aws_s3_bucket" "my_bucket"
         {
-          for_each = toset([dev],[stg],[prd])
-          bucket = "my-app-${each.key}
+          for_each = toset(["dev"],["stg"],["prd"])
+          bucket = "my-app-${each.key}"
         }
+
+for ------> just like a normal for loop 
+       locals
+       {
+       environments =  ["dev"],["stg"],["prd"]
+       bucket_names = [for env in local.environments : "my-app-${env}" ]
