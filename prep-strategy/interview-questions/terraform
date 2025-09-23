@@ -1,4 +1,4 @@
-for_each ---> to create a multiple instances of a resource.
+for_each ---> to create a multiple instances of a resource based on map/set
        resource "aws_s3_bucket" "my_bucket"
         {
           for_each = toset(["dev"],["stg"],["prd"])
