@@ -12,3 +12,4 @@ for ------> just like a normal for loop
        {
        environments =  ["dev"],["stg"],["prd"]
        bucket_names = [for env in local.environments : "my-app-${env}" ]
+       }
