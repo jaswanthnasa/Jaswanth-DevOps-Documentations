@@ -1,3 +1,5 @@
+Differences b/w for_each and for
+===============================
 for_each ---> to create a multiple instances of a resource based on map/set
        resource "aws_s3_bucket" "my_bucket"
         {
