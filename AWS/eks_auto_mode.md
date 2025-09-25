@@ -54,5 +54,3 @@ You'll need three tools on your computer: **AWS CLI**, **`kubectl`**, and **Helm
 1.  **Delete the Cluster**: Navigate back to your EKS cluster in the AWS console and click the **`Delete`** button. Confirm the cluster's name.
 2.  **Delete IAM Roles**: Go to the IAM console and delete the cluster and node roles you created earlier.
 
-<br>
-Now that you have the complete `README.md` file, would you like me to walk you through the final steps to clean up all the resources you&#39;ve created to avoid any unnecessary costs?
