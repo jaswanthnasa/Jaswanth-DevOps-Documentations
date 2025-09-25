@@ -86,3 +86,7 @@ Check that your cluster is running and `kubectl` is connected:
     ```bash
     kind delete cluster --name my-k8s-cluster
     ```
+  * **Get all Clusters list :**
+    ```bash
+    kind get clusters
+    ```  
